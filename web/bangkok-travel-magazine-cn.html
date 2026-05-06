@@ -1,0 +1,2581 @@
+
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>曼谷双轨深度行程｜2026.06.25 - 07.02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+/* Modern Magazine Design System */
+:root {
+  /* Colors - Editorial warm palette */
+  --bg: #FDFBF7;
+  --surface: #FFFFFF;
+  --text: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --text-light: #9B9B9B;
+  --accent: #D97757;
+  --accent-dark: #B85D3F;
+  --border: #E8E5DF;
+  --border-light: #F2F0EB;
+  
+  /* Typography */
+  --font-display: 'Newsreader', 'Lora', Georgia, serif;
+  --font-body: 'Inter', -apple-system, system-ui, sans-serif;
+  
+  /* Spacing */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --content-width: 720px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+/* Cover Section */
+.cover {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 900px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0.3) 0%, 
+    rgba(0,0,0,0.5) 100%);
+  z-index: 2;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  padding: var(--space-4);
+  max-width: 800px;
+}
+
+.cover-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+  opacity: 0.9;
+}
+
+.cover-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+}
+
+.cover-subtitle {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 300;
+  margin-bottom: var(--space-4);
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.cover-meta {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0.8;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+.scroll-arrow {
+  width: 1px;
+  height: 30px;
+  background: white;
+  position: relative;
+}
+
+.scroll-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(253, 251, 247, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 100;
+  padding: var(--space-3) 0;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  white-space: nowrap;
+  padding: var(--space-1) var(--space-2);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Section */
+.section {
+  padding: var(--space-6) var(--space-4);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-header {
+  max-width: var(--content-width);
+  margin: 0 auto var(--space-5);
+  text-align: center;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.section-desc {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Day Card */
+.day-card {
+  margin-bottom: var(--space-6);
+  background: var(--surface);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+
+.day-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.day-hero {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+  background: var(--border-light);
+}
+
+.day-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.day-card:hover .day-hero img {
+  transform: scale(1.05);
+}
+
+.day-tag {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  backdrop-filter: blur(10px);
+}
+
+.day-content {
+  padding: var(--space-4);
+}
+
+.day-header {
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: var(--space-3);
+}
+
+.day-date {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.day-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+}
+
+.day-theme {
+  font-size: 15px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.day-meta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: var(--space-2);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Activity Timeline */
+.activity {
+  padding: var(--space-3) 0;
+  border-left: 2px solid var(--border);
+  padding-left: var(--space-3);
+  margin-left: var(--space-2);
+  position: relative;
+}
+
+.activity::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: var(--space-3);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--border);
+}
+
+.activity:last-child {
+  border-left-color: transparent;
+}
+
+.activity-time {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--space-1);
+  font-family: var(--font-body);
+}
+
+.activity-title {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.activity-location {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.activity-location a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.activity-location a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.activity-details {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: var(--space-2);
+}
+
+.activity-note {
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Checklist */
+.checklist {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.checklist-item {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--surface);
+  margin-bottom: var(--space-2);
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.checklist-item:hover {
+  border-color: var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.checklist-item.checked {
+  opacity: 0.5;
+}
+
+.checklist-item.checked .checklist-text {
+  text-decoration: line-through;
+}
+
+.checklist-content {
+  flex: 1;
+}
+
+.checklist-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.checklist-deadline {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* Phase Separator */
+.phase-separator {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  margin: var(--space-6) 0;
+  position: relative;
+}
+
+.phase-separator::before,
+.phase-separator::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+.phase-separator::before {
+  top: 0;
+}
+
+.phase-separator::after {
+  bottom: 0;
+}
+
+.phase-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+  color: var(--text);
+}
+
+.phase-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+  background: var(--text);
+  color: white;
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+  margin-top: var(--space-7);
+}
+
+.footer-content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: var(--space-2);
+  opacity: 0.9;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cover {
+    min-height: 500px;
+  }
+  
+  .section {
+    padding: var(--space-5) var(--space-3);
+  }
+  
+  .day-content {
+    padding: var(--space-3);
+  }
+  
+  .day-tag {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  
+  .activity {
+    padding-left: var(--space-2);
+    margin-left: var(--space-1);
+  }
+  
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nav,
+  .scroll-indicator {
+    display: none;
+  }
+  
+  .cover {
+    page-break-after: always;
+  }
+  
+  .day-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+/* ── Detail Panel System ── */
+.detail-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-2);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.detail-trigger::after {
+  content: '▾';
+  font-size: 10px;
+  transition: transform 0.25s;
+}
+
+.detail-trigger.open::after {
+  transform: rotate(180deg);
+}
+
+.detail-trigger.type-place {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.detail-trigger.type-place:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.detail-trigger.type-warning {
+  color: #2563EB;
+  border: 1px solid #2563EB;
+}
+.detail-trigger.type-warning:hover {
+  background: #2563EB;
+  color: white;
+}
+
+.detail-trigger.type-tip {
+  color: #059669;
+  border: 1px solid #059669;
+}
+.detail-trigger.type-tip:hover {
+  background: #059669;
+  color: white;
+}
+
+.detail-trigger.type-checklist {
+  color: #7C3AED;
+  border: 1px solid #7C3AED;
+}
+.detail-trigger.type-checklist:hover {
+  background: #7C3AED;
+  color: white;
+}
+
+.detail-panel {
+  display: none;
+  margin-top: var(--space-2);
+  border-radius: 4px;
+  overflow: hidden;
+  animation: panelIn 0.25s ease;
+}
+
+.detail-panel.open {
+  display: block;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.detail-panel.type-place {
+  border-left: 3px solid var(--accent);
+  background: #FFF8F5;
+}
+
+.detail-panel.type-warning {
+  border-left: 3px solid #2563EB;
+  background: #EFF6FF;
+}
+
+.detail-panel.type-tip {
+  border-left: 3px solid #059669;
+  background: #ECFDF5;
+}
+
+.detail-panel.type-checklist {
+  border-left: 3px solid #7C3AED;
+  background: #F5F3FF;
+}
+
+.detail-panel-inner {
+  padding: var(--space-3);
+}
+
+.detail-panel-inner h5 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.detail-panel.type-place h5 { color: var(--accent); }
+.detail-panel.type-warning h5 { color: #2563EB; }
+.detail-panel.type-tip h5 { color: #059669; }
+.detail-panel.type-checklist h5 { color: #7C3AED; }
+
+.detail-panel-inner p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.detail-panel-inner ul {
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.detail-panel-inner ul li {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.detail-panel-inner .detail-img {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 3px;
+  margin-top: var(--space-2);
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--space-2);
+}
+
+.detail-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: rgba(0,0,0,0.06);
+  color: var(--text-muted);
+}
+
+/* Day Summary - 每日行程统整 */
+.day-summary {
+  margin: var(--space-3) 0 var(--space-4);
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+}
+
+.summary-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.summary-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-2);
+}
+
+.loc-tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 3px;
+  background: rgba(217,119,87,0.08);
+  color: var(--accent-dark);
+  border: 1px solid rgba(217,119,87,0.15);
+}
+
+.summary-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.warn-item {
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 6px 10px;
+  border-radius: 3px;
+  border-left: 3px solid;
+}
+
+.warn-item.type-warning {
+  background: #EFF6FF;
+  border-left-color: #2563EB;
+  color: #1e40af;
+}
+
+.warn-item.type-tip {
+  background: #ECFDF5;
+  border-left-color: #059669;
+  color: #065f46;
+}
+
+/* Language Toggle Button */
+#langToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+#langToggle:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<!-- Language Toggle Button -->
+<button id="langToggle" onclick="window.location.href='bangkok-travel-magazine.html'" title="切换繁简体">简</button>
+
+<!-- Cover -->
+<section class="cover">
+  <img class="cover-image" 
+       src="bangkok-images/cover-mahanakhon.jpg"
+       alt="Bangkok Skyline Daytime"
+       loading="eager">
+  <div class="cover-overlay"></div>
+  <div class="cover-content">
+    <div class="cover-label">Travel Journal 2026</div>
+    <h1 class="cover-title">曼谷双轨深度行程</h1>
+    <p class="cover-subtitle">五个记忆场景｜双人成行 + 单人延伸</p>
+    <div class="cover-meta">
+      <span>📅 2026.06.25 - 07.02</span>
+      <span>📍 Bangkok, Thailand</span>
+      <span>🎯 8 Days</span>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="#pre-departure" class="nav-link active">出发前准备</a>
+    <a href="#couple-phase" class="nav-link">双人成行 (6/25-29)</a>
+    <a href="#solo-phase" class="nav-link">单人延伸 (6/29-7/2)</a>
+    <a href="#post-trip" class="nav-link">回来后事项</a>
+  </div>
+</nav>
+
+<!-- Pre-departure Checklist -->
+<section id="pre-departure" class="section">
+  <div class="section-header">
+    <div class="section-label">Preparation</div>
+    <h2 class="section-title">出发前 14 项硬检查</h2>
+    <p class="section-desc">出发前把所有细节确认好，旅途才能顺畅</p>
+  </div>
+
+  <div class="checklist">
+    <div class="checklist-item" data-id="check-1">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">护照有效期 6 个月以上、姓名与机票一致</div>
+        <div class="checklist-deadline">⏰ 截止：出发前 7 天</div>
+        <button class="detail-trigger type-checklist" data-panel="dp-check-1" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-checklist" id="dp-check-1">
+          <div class="detail-panel-inner">
+            <h5>🛂 护照核查要点</h5>
+            <p>泰国入境规定护照效期须在入境日起算至少 6 个月以上。2026 年 6 月 25 日入境，护照有效期必须到 2026 年 12 月 25 日以后。</p>
+            <ul>
+              <li><strong>姓名比对</strong>：护照英文姓名必须与机票完全一致，包含空格与连字号。常见错误：机票用 CHEN MING 但护照是 CHEN-MING。</li>
+              <li><strong>损坏检查</strong>：护照封面破损、内页有水渍或涂改，可能被拒绝入境。出发前翻阅每一页确认。</li>
+              <li><strong>备份建议</strong>：护照数据页拍照存云端（Google Photos / iCloud），另打印一份放行李箱夹层，与正本分开存放。</li>
+              <li><strong>女友护照</strong>：同样需要确认，不要只查自己的。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">必办</span><span class="detail-tag">出发前 7 天</span><span class="detail-tag">两人都要查</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-2">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">旅游医疗保险（涵盖海外突发疾病、住院、紧急医疗转送）</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-warning" data-panel="dp-check-2" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-warning" id="dp-check-2">
+          <div class="detail-panel-inner">
+            <h5>🏥 旅游保险核查要点</h5>
+            <p>曼谷私立医院（如 Bumrungrad、Bangkok Hospital）医疗费用极高，一次急诊加住院可能超过 2.5 万人民币。保险是这趟旅行最重要的隐形保障。国内出游险（众安、平安、中国人保、美亚）都有泰国保障方案，选「境外旅行险/亚洲计划」即可。</p>
+            <ul>
+              <li><strong>必要涵盖项目</strong>：境外突发疾病医疗、住院费用、紧急医疗转运回国（这项最贵，单次可达 12 万人民币以上）。</li>
+              <li><strong>建议保额</strong>：医疗费用至少 30 万人民币以上；紧急医疗转运至少 50 万人民币。众安「众乐游」、美亚「万国游踪」优选型是两个常见选择，8 天保费约 80-150 元人民币。</li>
+              <li><strong>雨季特别风险</strong>：6-7 月是曼谷雨季，户外滑倒、食物中毒、肠胃炎发生率较高，确认保单涵盖这些情况。</li>
+              <li><strong>保单文件</strong>：保单号码、24 小时中文紧急救援电话截图存手机，另发一份给家人。多数保险公司都有 SOS 中文救援（如安盛、Europ Assistance 中文线）。</li>
+              <li><strong>信用卡附加保险</strong>：部分 Visa/万事达白金卡、银联钻石卡有附境外旅行险，但通常不涵盖紧急医疗转运，需另外加保。</li>
+              <li><strong>理赔凭证</strong>：所有医疗发票、诊断证明、处方都要保留正本（英文版），回国后才能向保险公司申请理赔。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">高风险项目</span><span class="detail-tag">两人都要保</span><span class="detail-tag">雨季必备</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-3">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">TDAC（泰国数字入境卡）6/22 起填写，QR Code 截图 + PDF + 云端三份备份</div>
+        <div class="checklist-deadline">⏰ 截止：6/22-6/25</div>
+        <button class="detail-trigger type-checklist" data-panel="dp-check-3" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-checklist" id="dp-check-3">
+          <div class="detail-panel-inner">
+            <h5>📱 TDAC 填写完整指南</h5>
+            <p>TDAC（Thailand Digital Arrival Card）是泰国 2025 年启用的数字入境申报系统，已于 2025 年全面强制执行，取代纸本 TM.6 入境卡。每位旅客（含婴幼儿）各需一份，不可共用。<strong>中泰自 2024 年 3 月 1 日起实行永久互免签证</strong>，持有效中国大陆护照单次最长停留 30 天，无需办签证；但 TDAC 仍必须填写。</p>
+            <ul>
+              <li><strong>填写时间窗口</strong>：抵达前 72 小时内（含抵达日）。本次 6/25 抵达，最早可填 6/22（周一）。</li>
+              <li><strong>官方入口</strong>：<strong>tdac.immigration.go.th</strong>，不使用任何代填服务或第三方 App（飞猪、携程的"代办"都不是官方），避免个人信息外泄。全程英文，但字段简单。</li>
+              <li><strong>住宿地址</strong>：195 N Sathon Rd, Si Lom, Bang Rak, Bangkok 10500, Thailand（ASAI Bangkok Sathorn）。照着酒店预订单抄英文地址即可。</li>
+              <li><strong>三份备份</strong>：① 手机相册截图（离线可用）② 云端 PDF（微信收藏 / 百度网盘 / iCloud）③ 同行人手机或另一台设备备份。<strong>不要只存 QQ 邮箱</strong>，落地后如果手机没信号打不开。</li>
+              <li><strong>机上/排队操作</strong>：排队前先把手机亮度调最高、QR Code 预先载入，不要到现场才开邮箱找邮件。海关官员会直接扫描手机屏幕 QR Code。</li>
+              <li><strong>常见错误</strong>：护照号码输入错误、住宿地址填不完整、忘记填同行人的份、提前超过 72 小时填会被系统拒绝。</li>
+              <li><strong>境外健康申报</strong>：2026 年 5 月起泰国不再要求入境健康申报。国内回程时如需可在「海关旅客指尖服务」小程序提前填写中国海关申报。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">6/22 起填</span><span class="detail-tag">两人各一份</span><span class="detail-tag">永久免签 30 天</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-4">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">Grab App 绑银联/双币卡，提前绑定并测试扣款功能</div>
+        <div class="checklist-deadline">⏰ 截止：出发前 3 天</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-4" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-4">
+          <div class="detail-panel-inner">
+            <h5>🚗 Grab 设置完整指南</h5>
+            <p>Grab 是东南亚最主要的打车平台，在曼谷几乎是唯一可靠的出租车替代方案。出发前先在国内设置好、实际测试一次，抵达曼谷后才不会手忙脚乱。微信/支付宝在 Grab 内不能使用，必须绑信用卡或在车上付现金。</p>
+            <ul>
+              <li><strong>绑卡测试</strong>：绑定 Visa/MasterCard 双币卡（招行全币种、工行宇宙星、建行龙卡 Visa 都可），或银联双标卡。<strong>单标银联卡（BIN 62 开头）在 Grab App 绑卡可能失败</strong>，建议优先使用 Visa/MC 双币卡。部分国内发卡行默认关闭境外支付，出发前到手机银行/95555 等客服电话确认「境外/跨境支付」已开通，并在国内完成一笔实际扣款测试。</li>
+              <li><strong>机场上车点</strong>：素万那普机场 Level 1, Exit 4，Grab 官方上车点 A/B 区，旁边有 Grab 服务台。绝对不要在 2F 入境大厅或停车场叫车。</li>
+              <li><strong>给司机的英文信息</strong>：I am at Suvarnabhumi Airport, Level 1, Exit 4, Grab Pickup Point A/B, near the Grab booth.</li>
+              <li><strong>预估车资</strong>：机场到 ASAI Sathorn 约 300-450 THB（含高速公路费），雨季塞车可能更高。</li>
+              <li><strong>诈骗防范</strong>：不要理会在入境大厅揽客的「Taxi? Taxi?」，只用 App 叫车。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">出发前 3 天测试</span><span class="detail-tag">机场必用</span><span class="detail-tag">Level 1 Exit 4</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-5">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">Bolt App 安装完成（Grab 备用）</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-5" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-5">
+          <div class="detail-panel-inner">
+            <h5>🚕 Bolt 备用叫车指南</h5>
+            <p>Bolt 是 Grab 在曼谷的主要竞争对手，界面类似，车费通常比 Grab 便宜 10-20%。当 Grab 找不到车或等待时间过长时，Bolt 是最佳备选。</p>
+            <ul>
+              <li><strong>安装时机</strong>：在国内先装好、把账号注册完，到曼谷才不需要花时间设置。</li>
+              <li><strong>支付方式</strong>：同样支持 Visa/MC 双币卡绑卡，也可现金付款（司机找零）。微信/支付宝不能直接付 Bolt 车资。</li>
+              <li><strong>使用时机</strong>：Grab 等待超过 10 分钟、Grab 车费明显偏高（高峰时段动态定价）、Grab App 故障时。</li>
+              <li><strong>注意事项</strong>：Bolt 在机场的官方上车点与 Grab 不同，需在 App 内确认指定位置。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">Grab 备用</span><span class="detail-tag">通常更便宜</span><span class="detail-tag">出发前安装</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-6">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">eSIM 安装并测试有信号</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-6" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-6">
+          <div class="detail-panel-inner">
+            <h5>📶 eSIM 设置指南</h5>
+            <p>泰国 eSIM 是最方便的上网方案，落地即用，不需要在机场排队换实体 SIM。建议出发前 1-2 天在国内安装并测试。<strong>关键：eSIM 走泰国本地网络，Google Maps / Gmail / Google Translate / WhatsApp / Klook / YouTube / Instagram / Facebook / Telegram 全部可直连，不需要翻墙</strong>——这是大陆游客最容易忽略的便利。用国内运营商漫游反而可能继续走国内 APN，部分境外服务依旧受限。</p>
+            <ul>
+              <li><strong>推荐方案</strong>：
+                <ul>
+                  <li><strong>Airalo（最推荐）</strong>：Asialink 7 天 5GB 约 8 美元、10GB 约 13 美元，落地 3 分钟自动激活。</li>
+                  <li><strong>Klook / 飞猪 / 携程</strong> 境外流量卡：8 天 10-20GB 约 60-90 人民币，部分含微信支付。</li>
+                  <li><strong>中国移动「无忧行」/ 中国联通「沃行漫游」</strong>：8 天泰国不限量包约 100-180 元，国内手机号原号漫游，接电话方便但走回中国 APN，<strong>Google 系服务不稳定</strong>，不推荐作为主力。</li>
+                </ul>
+              </li>
+              <li><strong>安装测试</strong>：在国内安装 eSIM 后可以先只做「下载 + 保留」，落地曼谷后再激活；或提前激活并切到飞行模式，落地开机自动识别。<strong>Airalo 的 QR Code 一激活就开始计时</strong>，务必到曼谷前一天再激活。</li>
+              <li><strong>双 SIM 设置</strong>：国内手机号 SIM 仅保留接收短信（银行 OTP、微信登录验证），关闭「数据漫游」以免被扣国际漫游费；eSIM 设为移动数据主卡。</li>
+              <li><strong>备用方案</strong>：若 eSIM 失效，素万那普机场 B 层有 AIS、DTAC、TrueMove 实体 SIM 柜台，7 天无限流量约 299-399 THB（约 60-80 元人民币），可刷 Visa/MC 或付现金。</li>
+              <li><strong>关于 VPN</strong>：人到泰国境内后，国内的 VPN（如自建梯子、机场订阅）<strong>不需要也不应该开启</strong>——泰国本地网络已经可以直连 Google 系服务。如果你在国内习惯挂 VPN，落地前记得关闭「始终连接」选项。</li>
+              <li><strong>注意</strong>：部分旧款华为手机（HarmonyOS 前）、iPhone XR 之前的型号不支持 eSIM，出发前确认手机型号。iPhone 大陆国行版 XS/XR/11/12 不支持 eSIM，只能买实体 SIM；iPhone 13 之后的香港/国际版支持双 eSIM。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">出发前安装测试</span><span class="detail-tag">10GB 以上</span><span class="detail-tag">双 SIM 设置</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-7">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">云闪付 App + 银联卡绑定（仅作辅助扫码，不是主支付）</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-7" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-7">
+          <div class="detail-panel-inner">
+            <h5>💳 辅助支付设置说明</h5>
+            <p>云闪付/银联二维码在曼谷部分商场和餐厅可用（看到 UnionPay QR 或「云闪付」标志），但覆盖率远不如当地 <strong>PromptPay</strong>（泰國本土行動支付，類似支付寶/微信支付）、微信、支付宝。定位是「辅助工具」，绝对不能作为不带现金的理由。</p>
+            <ul>
+              <li><strong>可用场景</strong>：部分 ICONSIAM / Siam Paragon / CentralWorld 商家、7-Eleven / Lotus / BigC 大型连锁、少数连锁餐厅（MK 火锅、After You 甜品）。看到 UnionPay QR 或「微信支付」「Alipay+」标志才能用。</li>
+              <li><strong>微信支付 / 支付宝覆盖</strong>：曼谷中高端商场、机场免税店、连锁便利店（7-Eleven、Lotus）普遍支持微信 / 支付宝扫商家码，<strong>在境外用微信支付不收外币手续费</strong>，汇率约当日中行中间价 +0.5%。但<strong>路边摊、夜市、出租车、嘟嘟车不支持</strong>。</li>
+              <li><strong>不可用场景</strong>：路边摊、传统市场、小型餐厅、Grab/Bolt 车资、船票、嘟嘟车。这些场合只收现金或本地 PromptPay。</li>
+              <li><strong>主支付顺序（推荐）</strong>：① Visa/MC 双币信用卡刷卡（商场、餐厅，手续费约 1.5%）② 现金（路边摊、市场、小费）③ 微信/支付宝扫商家码（连锁餐饮、便利店）④ Grab 绑 Visa/MC（交通）⑤ 云闪付（有标志才用）。</li>
+              <li><strong>重要提醒</strong>：Bank of Thailand 2025-10-30 起扩大跨境扫码（PromptPay ↔ 中国银联/微信/支付宝互通），但不是每个摊位都稳定支持，不要依赖它。街边小店的收款码往往只绑当地人的泰国银行账户，中国 App 扫了会提示「商户不支持」。</li>
+              <li><strong>防盗刷提醒</strong>：境外刷卡务必开启手机短信提醒，每天睡前核对当日消费记录。若发现异常立即致电发卡行 24 小时客服挂失。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">辅助工具</span><span class="detail-tag">不替代现金</span><span class="detail-tag">微信/支付宝可用连锁</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-8">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">Google Maps 离线地图下载：酒店、机场、ICONSIAM、MRT Lumphini、BKK、Rot Fai Srinakarin、Khlong Bang Luang</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-8" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-8">
+          <div class="detail-panel-inner">
+            <h5>🗺️ 离线地图下载指南</h5>
+            <p>曼谷雨季偶有信号不稳，加上部分地下商场和运河区域信号差。离线地图是最重要的导航保障，出发前必须下载。</p>
+            <ul>
+              <li><strong>下载方式</strong>：Google Maps → 搜索地点 → 点选「下载离线地图」，或直接下载「曼谷」整个城市范围。</li>
+              <li><strong>必下载区域</strong>：① 素万那普机场周边 ② ASAI Sathorn 酒店周边（Silom/Sathorn）③ 旧城区（大皇宫/郑王庙）④ Sukhumvit（Emsphere/Phrom Phong）⑤ ICONSIAM/Khlong San ⑥ Rot Fai Srinakarin ⑦ Khlong Bang Luang ⑧ Song Wat/Talat Noi</li>
+              <li><strong>存储空间</strong>：曼谷完整离线地图约 300-500MB，确认手机有足够空间。</li>
+              <li><strong>女友手机</strong>：同样下载，两人都有备份。</li>
+              <li><strong>有效期</strong>：离线地图有效期约 30 天，出发前 1-2 天下载即可。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">两人都要下载</span><span class="detail-tag">出发前 1-2 天</span><span class="detail-tag">300-500MB</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-9">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">酒店机场 5,000 THB 现金换好，确认小钞至少 1,500 THB</div>
+        <div class="checklist-deadline">⏰ 截止：抵达当日</div>
+        <button class="detail-trigger type-warning" data-panel="dp-check-9" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-warning" id="dp-check-9">
+          <div class="detail-panel-inner">
+            <h5>💵 现金换汇完整策略</h5>
+            <p>现金在曼谷仍是不可或缺的支付方式，尤其是路边摊、传统市场、船票、嘟嘟车、小费这些场合。2026 年人民币兑泰铢参考汇率约 <strong>1 RMB ≈ 5 THB</strong>（浮动），即 100 人民币约 500 泰铢。</p>
+            <ul>
+              <li><strong>换汇最优顺序（成本从低到高）</strong>：
+                <ol>
+                  <li><strong>曼谷市区 SuperRich（绿色/橙色）</strong>：Silom / Sathorn / Asok 有多家分店，绿标（Super Rich Thailand）汇率最好。带人民币或美元现金去换，比国内中行高约 3-5%。</li>
+                  <li><strong>素万那普机场 B 层入境层</strong>（不是 2F 入境大厅）：SuperRich 或 Vasu Exchange 柜台，汇率比市区差约 0.8-1.5%，但够用。<strong>避免</strong>入境大厅 2F 的「Thai Exchange」小亭，汇率往往差 3-5%。</li>
+                  <li><strong>国内中国银行预约</strong>：出发前一周在手机银行预约泰铢现钞，到网点领取。汇率居中，好处是省时间，不用入境后排队。</li>
+                  <li><strong>银联卡 ATM 取现（下策）</strong>：泰国任何 ATM 都收<strong>220 THB/笔</strong>固定手续费（约 44 元人民币），另加国内发卡行 1% 左右手续费。单笔上限通常 20,000 THB，小额取现非常不划算，仅紧急备用。</li>
+                </ol>
+              </li>
+              <li><strong>换汇金额</strong>：抵达当日换 5,000 THB（约 1,000 元人民币）作为启动资金，后续视消费情况在市区 SuperRich 补换。8 天双人纯现金消费（路边摊、夜市、小费、船票）预估 12,000-18,000 THB。</li>
+              <li><strong>小钞分配</strong>：20/50/100 THB 小钞至少 1,500 THB；500/1000 THB 大钞只在商场或 7-Eleven 拆开。<strong>路边摊、嘟嘟车、小费永远只给小钞</strong>——给 1000 大钞摊贩会直接说「没零钱」或不找零给你。</li>
+              <li><strong>分散存放</strong>：大钞放钱包内层，小钞放外层口袋方便取用，另备 1,000 THB 紧急备用金放行李箱。只带当天预算出门，大钞和护照锁酒店保险箱。</li>
+              <li><strong>不建议先换美元再换泰铢</strong>：曼谷部分小店只收泰铢，美元换成泰铢会经过两次汇损。直接带人民币现金去 SuperRich 换泰铢，或用微信支付/支付宝直接境外消费。</li>
+              <li><strong>微信支付/支付宝当"移动钱包"用</strong>：在连锁店（7-Eleven、Lotus、大型商场、After You 等）直接扫商户码付款，汇率约当日中行中间价 +0.5%，不收境外手续费，比带太多现金更灵活。但路边摊、出租车、嘟嘟车不支持，现金仍是必需品。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">市区 SuperRich 最优</span><span class="detail-tag">小钞 1,500+</span><span class="detail-tag">1 RMB ≈ 5 THB</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-10">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">Mahanakhon SkyWalk 6/26 Klook 订票（天气触发可改期）</div>
+        <div class="checklist-deadline">⏰ 截止：出发前 7 天</div>
+        <button class="detail-trigger type-place" data-panel="dp-check-10" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-place" id="dp-check-10">
+          <div class="detail-panel-inner">
+            <h5>🏙️ Mahanakhon SkyWalk 订票说明</h5>
+            <p>Mahanakhon SkyWalk 是曼谷最高的观景台（314 米），78 楼有玻璃步道（The Peak）和户外观景台。雨季天气不稳定，订票策略很重要。</p>
+            <ul>
+              <li><strong>开放时间</strong>：每日 10:00-00:00（午夜），最后入场 23:00。</li>
+              <li><strong>票价</strong>：Klook 预订约 880 THB，现场购票更贵。</li>
+              <li><strong>天气触发机制</strong>：78F 户外观景台（含玻璃步道）在暴风雨时会关闭，但不退票，可改期。建议订可改期票种。</li>
+              <li><strong>最佳时段</strong>：日落前 1 小时（约 17:30-18:30）入场，可同时看到白天和夜景。营业至午夜，不用担心时间。</li>
+              <li><strong>交通</strong>：BTS Chong Nonsi Exit 1，步行约 2 分钟。</li>
+              <li><strong>着装</strong>：无特别要求，但玻璃步道需脱鞋（现场提供鞋套）。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-mahanakhon.jpg" alt="Bangkok skyline view">
+            <div class="detail-tags"><span class="detail-tag">出发前 7 天订</span><span class="detail-tag">可改期票种</span><span class="detail-tag">17:30 入场最佳</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-11">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">Saffron Cruise 6/28 Klook 订票（含晚餐，Pier 1 check-in 18:30）</div>
+        <div class="checklist-deadline">⏰ 截止：出发前 7 天</div>
+        <button class="detail-trigger type-place" data-panel="dp-check-11" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-place" id="dp-check-11">
+          <div class="detail-panel-inner">
+            <h5>⛴️ Saffron Cruise 订票说明</h5>
+            <p>Saffron Cruise 是昭披耶河上的高端晚餐游船，以泰式料理和河岸夜景著称。这是双人行最重要的预订项目，需要提前 7 天以上订票。</p>
+            <ul>
+              <li><strong>集合地点</strong>：ICONSIAM Pier 1（ICONSIAM 商场河岸侧），check-in 时间 18:30，19:00 准时开船。</li>
+              <li><strong>票价</strong>：Klook 预订含晚餐约 2,800-3,500 THB/人（约 560-700 人民币），现场购票无折扣。价格可能因季节及预订平台浮动。</li>
+              <li><strong>着装要求</strong>：Smart Casual。男性：长裤 + 有领上衣或 Polo 衫。女性：洋装或长裤套装。避免拖鞋、短裤、无袖上衣。</li>
+              <li><strong>交通建议</strong>：16:30 从酒店出发（不是 17:00），预留 80 分钟找 Pier 1 的缓冲时间。最佳路线：BTS Saphan Taksin 站 2 号出口 → Sathorn Pier（中央码头）→ 搭 ICONSIAM 免费接驳船（每 15 分钟一班，约 15 分钟到）；或 BTS → Krung Thon Buri → Gold Line 到 ICONSIAM。</li>
+              <li><strong>注意事项</strong>：Pier 1 和 Pier 2 不同，check-in 在 Pier 1，登船在 Pier 2，现场工作人员会引导。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">出发前 7 天订</span><span class="detail-tag">Smart Casual</span><span class="detail-tag">16:30 出发</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-12">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">SPA 6/27 下午 15:00 场预订（Health Land Silom / Asia Herb / Let's Relax）</div>
+        <div class="checklist-deadline">⏰ 截止：出发前 3 天</div>
+        <button class="detail-trigger type-place" data-panel="dp-check-12" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-place" id="dp-check-12">
+          <div class="detail-panel-inner">
+            <h5>💆 SPA 预订完整指南</h5>
+            <p>6/27 是周六，曼谷知名 SPA 馆周末场次抢手，必须提前 3 天以上预订。以下三家都在 Silom/Sathorn 区，步行或短程 BTS 可达。</p>
+            <ul>
+              <li><strong>Health Land Silom</strong>：最具性价比，2 小时泰式按摩约 650 THB，环境整洁，服务稳定。地址：120 North Sathorn Rd。</li>
+              <li><strong>Asia Herb Association Sathorn</strong>：草药球按摩著名，2 小时约 900-1,200 THB，环境较精致。地址：Sathorn Soi 1。</li>
+              <li><strong>Let's Relax Silom</strong>：连锁品牌，品质稳定，可线上预订，2 小时约 800-1,000 THB。</li>
+              <li><strong>预订方式</strong>：直接电话或官网预订，说明人数（2 人）、时间（15:00）、项目（泰式按摩 2 小时）。</li>
+              <li><strong>注意事项</strong>：按摩前 1 小时不要吃太饱；带换洗衣物；小费惯例约 50-100 THB/人。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">出发前 3 天订</span><span class="detail-tag">周六抢手</span><span class="detail-tag">小费 50-100 THB</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-13">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">充电宝清单：100Wh 以下、最多 2 个、有 Wh/mAh 标示、电量 &lt;25%、全部随身不托运</div>
+        <div class="checklist-deadline">⏰ 截止：打包当日</div>
+        <button class="detail-trigger type-warning" data-panel="dp-check-13" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-warning" id="dp-check-13">
+          <div class="detail-panel-inner">
+            <h5>🔋 充电宝航空规定（2026）</h5>
+            <p>充电宝规定是最容易在安检被拦截的项目。2026 年规定已趋严，打包那天一定要逐一确认。</p>
+            <ul>
+              <li><strong>容量限制</strong>：100Wh 以下免申请；100-160Wh 需航空公司事先批准；160Wh 以上禁止携带。</li>
+              <li><strong>数量限制</strong>：每人最多 2 个，随身行李，不可托运。</li>
+              <li><strong>标示要求</strong>：每个充电宝必须清楚印有 Wh 或 mAh/V 数值。没有标示的不要带，安检会直接没收。</li>
+              <li><strong>电量建议</strong>：IATA 建议电量低于 25%，降低安全风险。</li>
+              <li><strong>Thai Airways 特别规定（2026-03-27 起）</strong>：不可放 overhead bin、机上不可使用、不可充电，必须放座位下或椅背口袋。</li>
+              <li><strong>换算参考</strong>：10,000mAh × 3.7V ÷ 1000 = 37Wh；20,000mAh × 3.7V ÷ 1000 = 74Wh，均在 100Wh 以下。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">100Wh 以下</span><span class="detail-tag">最多 2 个</span><span class="detail-tag">永远随身</span><span class="detail-tag">不可托运</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-14">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">确认 6/29 HU430 起飞时间 13:50 → 计算最晚离开酒店 10:15</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-warning" data-panel="dp-check-14" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-warning" id="dp-check-14">
+          <div class="detail-panel-inner">
+            <h5>✈️ 女友送机时间计算</h5>
+            <p>HU430 是海南航空 BKK → PEK 直飞班机，13:50 起飞。国际航班建议提前 3 小时到机场，雨季容易塞车，要多留缓冲时间。</p>
+            <ul>
+              <li><strong>时间反推</strong>：13:50 起飞 → 10:50 到机场（提前 3 小时）→ 10:15 最晚离开酒店（预留 35 分钟车程 + 缓冲）。</li>
+              <li><strong>雨季风险</strong>：Sathorn 到素万那普机场正常约 45-60 分钟，雨季塞车可能 90 分钟以上。10:15 出发是底线，不能更晚。</li>
+              <li><strong>早餐安排</strong>：08:00-09:00 早餐，09:00-10:00 整理行李，10:15 Grab 出发。</li>
+              <li><strong>行李确认</strong>：护照、TDAC QR Code、充电宝（随身）、机票确认信、退税单（如有）分开确认。</li>
+              <li><strong>送机后</strong>：你的单人行程从这天下午正式开始，不需要赶回酒店，可以在机场附近吃午餐再回。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">10:15 最晚出发</span><span class="detail-tag">雨季预留 90 分钟</span><span class="detail-tag">HU430 13:50</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-15">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">小费现金准备：20/50/100 THB 小钞各 10 张（约 1,000 THB）</div>
+        <div class="checklist-deadline">⏰ 截止：抵达当日换汇时</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-15" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-15">
+          <div class="detail-panel-inner">
+            <h5>💸 泰国小费文化（国内没有，必读）</h5>
+            <p>大陆基本没有小费习惯，但在泰国，小费是对服务人员日常收入的重要补充。不是强制，<strong>但在特定场合不给会显得失礼或让对方尴尬</strong>。关键原则：<strong>只给纸币，不给硬币</strong>——硬币在泰国被视为不尊重。</p>
+            <ul>
+              <li><strong>酒店床头小费</strong>：每晚 20-40 THB（约 4-8 元人民币）压在枕头上，给打扫房间的阿姨。不给不会被抱怨，但给了之后毛巾、瓶装水可能会多补。8 晚约 200 THB。</li>
+              <li><strong>酒店行李员</strong>：帮搬行李到房间，20 THB/件；帮叫车或开门，可以不给（已含服务费）。</li>
+              <li><strong>Spa / 按摩</strong>：2 小时泰式按摩，小费 50-100 THB 给按摩师本人（不是柜台）。Let's Relax / Health Land 这种连锁，服务费已含在账单里，可只给 50 THB 表示心意；街边独立按摩店没服务费，小费就更重要。</li>
+              <li><strong>餐厅</strong>：账单上若已显示 "Service Charge 10%" 可不给；若没写，留 20-50 THB 纸钞在桌上或找零的零钱。路边摊不需要小费。</li>
+              <li><strong>Grab / 出租车</strong>：找零的零钱可以留给司机（约 10-20 THB）。不想给直接说 "Keep the change" 或摆手即可，司机不会为难你。</li>
+              <li><strong>嘟嘟车 / 摩的</strong>：上车前先讲好价格，小费可有可无。</li>
+              <li><strong>Saffron Cruise 游船</strong>：服务人员全程服务，下船时小费 100-200 THB 给领班。</li>
+              <li><strong>不要做的事</strong>：① 不给硬币，被视为侮辱 ② 不要在对方面前炫耀给了多少 ③ 不用换美元给小费，泰铢现金最合适。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">只给纸币</span><span class="detail-tag">8 天预算 1,000 THB</span><span class="detail-tag">不强制但要会给</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-16">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">常用药品清单（含药品成分合规检查，避开管制品）</div>
+        <div class="checklist-deadline">⏰ 截止：打包当日</div>
+        <button class="detail-trigger type-warning" data-panel="dp-check-16" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-warning" id="dp-check-16">
+          <div class="detail-panel-inner">
+            <h5>💊 泰国带药规定（国内常见药可能违法）</h5>
+            <p>泰国对含特定成分的药品管控严格，<strong>大陆常见的感冒药、咳嗽药水里含的「伪麻黄碱 (Pseudoephedrine)」在泰国属于管制药品</strong>，未申报超量携带可能被海关扣押甚至拘留。出发前务必逐一检查成分表。</p>
+            <ul>
+              <li><strong>不要带（泰国管制）</strong>：
+                <ul>
+                  <li>新康泰克、白加黑、泰诺（含伪麻黄碱 Pseudoephedrine）</li>
+                  <li>复方甘草片（含阿片成分）</li>
+                  <li>联邦止咳露、复方磷酸可待因口服液（含可待因）</li>
+                  <li>曲马多、含麻醉类止痛药</li>
+                </ul>
+              </li>
+              <li><strong>可以带（一般 OTC 药）</strong>：
+                <ul>
+                  <li>肠胃：蒙脱石散（思密达）、整肠丸、黄连素、益生菌。曼谷水土不服概率高，必带。</li>
+                  <li>感冒：板蓝根颗粒、维 C 银翘片（不含伪麻黄碱）、喉糖。</li>
+                  <li>过敏：扑尔敏、氯雷他定（开瑞坦）。</li>
+                  <li>外伤：云南白药喷雾（但不能带气雾剂上飞机，只能托运）、创可贴、碘伏棉签。</li>
+                  <li>防中暑：藿香正气软胶囊、十滴水、人丹。</li>
+                  <li>防蚊虫：风油精、清凉油（不能上随身飞机，要托运）、花露水。</li>
+                </ul>
+              </li>
+              <li><strong>原则</strong>：带<strong>自用量（15 天以内）</strong>，带<strong>原包装（带说明书）</strong>，<strong>不要分装</strong>。如果是处方药（高血压、糖尿病），带医生开的中英文诊断书一份，过海关时主动申报。</li>
+              <li><strong>曼谷就地买药</strong>：Boots、Watsons 药妆店 Silom / Siam Paragon 都有，店员会英文。万金油、蚊虫咬药 (Caladryl)、防晒（Biore、Nivea）比国内便宜。</li>
+              <li><strong>紧急就医</strong>：曼谷 Bumrungrad、BNH Hospital、Samitivej 有中文翻译服务，刷 Visa/MC 即可。普通小病去 Boots 买药就够。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">不带含可待因/伪麻黄碱</span><span class="detail-tag">原包装带说明书</span><span class="detail-tag">肠胃药必带</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="check-17">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">泰国文化快速提醒：皇室尊重 + 大皇宫着装 + 过马路安全</div>
+        <div class="checklist-deadline">⏰ 截止：出发前</div>
+        <button class="detail-trigger type-tip" data-panel="dp-check-17" data-label-open="查看说明" data-label-close="收起说明"><span class="trigger-label">查看说明</span></button>
+        <div class="detail-panel type-tip" id="dp-check-17">
+          <div class="detail-panel-inner">
+            <h5>🇹🇭 泰国文化差异三件事（避免踩雷）</h5>
+            <p>这三点是大陆游客最容易踩雷的文化差异，出发前看一遍就够。</p>
+            <ul>
+              <li><strong>1. 对皇室的尊重（硬规矩）</strong>：
+                <ul>
+                  <li>泰国「冒犯君主法」严厉，公开批评皇室成员可被判 3-15 年徒刑。</li>
+                  <li>见到国王画像不指指点点、不评论。电影开场前会播放国王颂歌，<strong>所有人必须起立</strong>，不要继续吃爆米花或玩手机。</li>
+                  <li>泰铢纸币上有国王头像，<strong>不要折叠、撕破、脚踩</strong>（硬币同理）。给小费递泰铢时双手正面递出。</li>
+                  <li>社交媒体发文不要带负面评论和皇室肖像。</li>
+                </ul>
+              </li>
+              <li><strong>2. 寺庙与皇宫着装（大皇宫最严）</strong>：
+                <ul>
+                  <li>大皇宫、玉佛寺：<strong>不可</strong>穿无袖上衣、短裤、短裙、破洞裤、紧身裤、拖鞋、凉鞋。女生最好带一条围巾遮肩。</li>
+                  <li>现场可以租借长裤/纱笼（约 200 THB + 押金 200 THB），款式不好看。建议直接穿符合规定的衣服去。</li>
+                  <li>入寺要脱鞋，袜子可穿。别用脚底对着佛像、别爬上佛像合影。</li>
+                </ul>
+              </li>
+              <li><strong>3. 过马路与交通（和国内相反）</strong>：
+                <ul>
+                  <li>泰国<strong>右舵车、靠左行驶</strong>，过马路前先看右再看左，与国内习惯相反。</li>
+                  <li>曼谷摩托车和嘟嘟车多、车速快、基本<strong>不礼让行人</strong>，即使在斑马线上车也不会停。必须等所有方向都没车再快速通过。</li>
+                  <li>尽量走人行天桥或地铁地下通道。</li>
+                  <li>街头摩托出租车（Motorbike Taxi，穿橙色背心）可以短距离打车，但没有保险，不建议尝试。</li>
+                </ul>
+              </li>
+              <li><strong>其他小提醒</strong>：
+                <ul>
+                  <li>不要摸小孩子头（泰国认为头是神圣的）。</li>
+                  <li>酒店可能不配牙刷、拖鞋（ASAI 有提供，但自带备用更省心）。</li>
+                  <li>曼谷大多数公厕收费 5-10 THB，准备零钱。</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">皇室尊重</span><span class="detail-tag">着装严格</span><span class="detail-tag">靠左行驶</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Couple Phase -->
+<section id="couple-phase" class="section">
+  <div class="section-header">
+    <div class="section-label">Phase 01</div>
+    <h2 class="section-title">双人成行｜五个记忆场景</h2>
+    <p class="section-desc">6/25 - 6/29｜四天相伴时光</p>
+  </div>
+
+  <!-- Day 1 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day1-airport.jpg"
+           alt="Suvarnabhumi Airport Bangkok"
+           loading="lazy"
+           data-phase="couple"
+           data-scene="arrival">
+      <div class="day-tag">Day 1</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">6/25 周四</div>
+        <h3 class="day-title">初到曼谷的第一个晚上</h3>
+        <p class="day-theme">第一个东南亚夜晚、7-11 仪式</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐ 强度：轻松</span>
+          <span class="meta-item">🌙 夜晚抵达</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这天没有紧凑的行程，重点是「适应」。你会在下午抵达素万那普机场，办完入境、提领行李、换好泰铢，再搭 Grab 到 Sathorn 区的 ASAI 酒店。曼谷的热气和气味会在出机场的那一刻包围你——这是东南亚给每位初访者的第一个拥抱。晚上不要安排任何景点，酒店附近找东西吃，然后去 7-11 完成「仪式」：挑一瓶没喝过的饮料、选一个没看过的零食。这些小事会成为你们之后聊起曼谷时，最先浮现的画面。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">TDAC QR Code 必须预先填好，排队前把手机亮度调到最高，海关官员会直接扫描。</div>
+          <div class="warn-item type-warning">入境审查可能问住宿地址，准备好「ASAI Bangkok Sathorn, 195 N Sathon Rd」。</div>
+          <div class="warn-item type-tip">7-11 仪式是双人成行第一个共同记忆，建议买泰式奶茶 + 一包没看过的零食，边吃边讨论明天的行程。<strong>泰国 7-11 是全球密度最高的便利店之一</strong>，不仅能买零食饮料，还能缴水电费、打印、寄快递、买电影票，几乎等同「社区服务中心」。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">15:25 - 16:30</div>
+        <h4 class="activity-title">素万那普机场入境</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Suvarnabhumi+Airport/@13.6900,100.7501,15z" target="_blank">素万那普国际机场 T1</a></div>
+        <div class="activity-note">📌 TDAC QR Code + 护照准备好</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d1-a1" data-label-open="入境流程详解" data-label-close="收起"><span class="trigger-label">入境流程详解</span></button>
+        <div class="detail-panel type-warning" id="dp-d1-a1">
+          <div class="detail-panel-inner">
+            <h5>🛬 素万那普机场入境完整流程</h5>
+            <p>素万那普（BKK）是曼谷主要国际机场，入境流程通常需要 45-75 分钟，雨季旺季可能更长。文件备妥最重要，不要到现场才翻包包。</p>
+            <ul>
+              <li><strong>落地后</strong>：跟着「Immigration」指标走，不要跟着「Transit」走。T1 入境大厅在 2F。</li>
+              <li><strong>TDAC 准备</strong>：排队前把手机亮度调最高，QR Code 预先开启。海关官员会扫描 QR Code，不需要打印。</li>
+              <li><strong>入境审查</strong>：递交护照 + TDAC QR Code。官员可能问住宿地址（ASAI Bangkok Sathorn, 195 N Sathon Rd）和停留天数（8 天）。</li>
+              <li><strong>行李提领</strong>：入境后到 B 层提领行李，注意看航班号码对应的转盘号码。</li>
+              <li><strong>换汇时机</strong>：提领行李后，在 B 层找 SuperRich 或 Vasu Exchange 换 5,000 THB，不要在入境大厅的小亭换。</li>
+              <li><strong>诈骗警示</strong>：出关后会有人主动搭话说「Taxi? Taxi?」或「Special price」，一律不理，直接走向 Level 1 Exit 4 叫 Grab。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">45-75 分钟</span><span class="detail-tag">TDAC 预先开启</span><span class="detail-tag">B 层换汇</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">16:30 - 17:45</div>
+        <h4 class="activity-title">机场 → ASAI Bangkok Sathorn 酒店</h4>
+        <div class="activity-details">
+          <span>🚗 Grab（Level 1 Exit 4 官方上车点）</span>
+          <span>💰 约 300-450 THB</span>
+        </div>
+        <div class="activity-note">📌 雨季预留缓冲时间</div>
+        <button class="detail-trigger type-tip" data-panel="dp-d1-a2" data-label-open="Grab 叫车详解" data-label-close="收起"><span class="trigger-label">Grab 叫车详解</span></button>
+        <div class="detail-panel type-tip" id="dp-d1-a2">
+          <div class="detail-panel-inner">
+            <h5>🚗 机场 Grab 完整操作指南</h5>
+            <p>从机场到 ASAI Sathorn 约 30-45 公里，正常车程 45-60 分钟，雨季塞车可能 90 分钟以上。Grab 是最安全可靠的选择。</p>
+            <ul>
+              <li><strong>上车点</strong>：出关后搭电梯到 Level 1（地面层），往 Exit 4 方向走，看到 Grab 黄绿色标志的服务台，在 Pickup Point A 或 B 等候。</li>
+              <li><strong>App 操作</strong>：开启 Grab → 输入目的地「ASAI Bangkok Sathorn」→ 选 GrabCar（标准）→ 确认上车点是 Level 1 Exit 4 → 叫车。</li>
+              <li><strong>给司机信息</strong>：I am at Suvarnabhumi Airport, Level 1, Exit 4, Grab Pickup Point A/B, near the Grab booth.</li>
+              <li><strong>车资说明</strong>：300-450 THB 含高速公路费（Expressway toll 约 75 THB），司机会问要不要走高速，建议说 Yes 节省时间。</li>
+              <li><strong>雨季注意</strong>：6 月下午是曼谷最容易塞车的时段，预留 90 分钟缓冲。</li>
+              <li><strong>Grab 失败备案</strong>：若 Grab 等待超过 15 分钟，切换 Bolt App 重新叫车。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">Level 1 Exit 4</span><span class="detail-tag">300-450 THB</span><span class="detail-tag">走高速更快</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">17:45 - 18:45</div>
+        <h4 class="activity-title">酒店 Check-in + 洗澡换衣</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/ASAI+Bangkok+Sathorn/@13.7234,100.5278,17z" target="_blank">ASAI Bangkok Sathorn</a></div>
+        <button class="detail-trigger type-place" data-panel="dp-d1-a3" data-label-open="酒店信息" data-label-close="收起"><span class="trigger-label">酒店信息</span></button>
+        <div class="detail-panel type-place" id="dp-d1-a3">
+          <div class="detail-panel-inner">
+            <h5>🏨 ASAI Bangkok Sathorn 酒店说明</h5>
+            <p>ASAI Bangkok Sathorn 是 Dusit 集团旗下的设计型精品酒店，位于 Silom/Sathorn 商业区，<strong>BTS（曼谷空中捷运系统，类似上海的地铁/深圳的轻轨）</strong> Saint Louis 站步行 5 分钟。整趟旅行的固定基地。</p>
+            <ul>
+              <li><strong>地址</strong>：195 N Sathon Rd, Si Lom, Bang Rak, Bangkok 10500</li>
+              <li><strong>Check-in 时间</strong>：正式 check-in 时间 14:00，若提早到可寄放行李。</li>
+              <li><strong>设施</strong>：屋顶泳池、健身房、1-2-3 by ASAI 餐厅（早餐）、The Kitchen（全日餐厅）。</li>
+              <li><strong>交通</strong>：BTS Saint Louis Exit 1 步行 5 分钟；MRT Lumphini 步行 10 分钟。</li>
+              <li><strong>周边</strong>：步行范围内有 7-11（24 小时）、Prachak 烧鸭、Convent Road 餐厅街。</li>
+              <li><strong>重要提醒</strong>：Check-in 时确认房间朝向（高楼层城市景观较好）；询问早餐时间（通常 07:00-10:00）。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-hotel.jpg" alt="ASAI Bangkok Sathorn Hotel">
+            <div class="detail-tags"><span class="detail-tag">BTS Saint Louis 5 分钟</span><span class="detail-tag">屋顶泳池</span><span class="detail-tag">整趟旅行基地</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">19:00 之后</div>
+        <h4 class="activity-title">触发式决策：晚餐 + 7-11 仪式</h4>
+        <div class="activity-details">
+          <span>🍜 沙吞近距离（Prachak 烧鸭 / 海南鸡饭）</span>
+          <span>💰 200-400 THB</span>
+        </div>
+        <div class="activity-note">✨ 三个小任务：一起逛 7-11 挑饮料、各选一个没看过的零食、试一次 BTS 转乘（Saint Louis → Sala Daeng 来回）</div>
+        <button class="detail-trigger type-place" data-panel="dp-d1-a4" data-label-open="晚餐选项 + 7-11 指南" data-label-close="收起"><span class="trigger-label">晚餐选项 + 7-11 指南</span></button>
+        <div class="detail-panel type-place" id="dp-d1-a4">
+          <div class="detail-panel-inner">
+            <h5>🍜 第一晚触发式决策指南</h5>
+            <p>第一晚的设计原则是「轻松适应」，不跑夜市、不上 rooftop、不跨区。根据抵达酒店的时间决定晚间行程。</p>
+            <ul>
+              <li><strong>18:00 前到酒店（最乐观）</strong>：BTS Saint Louis → Phrom Phong，Emsphere B1 美食街晚餐，21:00 前回酒店。</li>
+              <li><strong>18:00-19:00 到酒店（默认情境）</strong>：步行到 Convent Road 或 Surawong，Prachak 烧鸭（店内空调）或海南鸡饭，再逛 7-11。</li>
+              <li><strong>19:00 后到酒店</strong>：酒店 The Kitchen 简餐 + 酒店旁 7-11，不出远门。</li>
+              <li><strong>Prachak 烧鸭</strong>：Convent Road 上的老店，泰式烧鸭饭约 120-180 THB，有空调，不需要排队。</li>
+              <li><strong>7-11 仪式三件事</strong>：① 各自挑明天路上喝的饮料（椰子水、泰式红茶、Oishi 绿茶）② 各选一个没看过的零食 ③ 试一次 BTS（Saint Louis → Sala Daeng 来回，熟悉闸口和 <strong>Rabbit Card</strong>——泰國 BTS 交通卡，類似中國的城市交通卡或八達通，可直接刷卡進站）。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">步行范围解决</span><span class="detail-tag">22:00 前睡觉</span><span class="detail-tag">明天强度高</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Day 2 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day2-grand-palace.jpg"
+           alt="Grand Palace Wat Phra Kaew Bangkok" 
+           loading="lazy"
+           data-phase="couple"
+           data-scene="heritage">
+      <div class="day-tag">Day 2</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">6/26 周五</div>
+        <h3 class="day-title">古典曼谷 + 城市夜景</h3>
+        <p class="day-theme">河流轴线：大皇宫 → 郑王庙 → Mahanakhon</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐⭐⭐⭐ 强度：高</span>
+          <span class="meta-item">☀️ 户外行程</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这天是整趟旅行强度最高的一天，但也是最值得的一天。你会沿着昭披耶河走一条经典路线：早上先到大皇宫，这里是泰国王室和佛教信仰的核心，建筑上的金色尖顶和彩色瓷砖会让你明白为什么曼谷被称为「天使之城」。接着搭渡轮到对岸的郑王庙，从那里回望大皇宫的角度，是摄影师最爱的构图。下午回酒店休息——这不是浪费时间，是为了晚上的 Mahanakhon 夜景储存体力。日落前上楼，看这座城市从白天转入夜晚的过程，然后在附近的 ICONSIAM 吃晚餐。这一天的节奏是「早起、中午休息、晚上再上」，记得带防晒和足够的水。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">大皇宫着装严格：长裤或长裙、肩膀必须覆盖、不可穿夹脚拖。不符合规定会被拒绝入场。</div>
+          <div class="warn-item type-warning">08:00 前到达大皇宫，避开 10:00 后的团客高峰。早到半小时，体验差很多。</div>
+          <div class="warn-item type-tip">郑王庙日落前一小时最美，建议 17:00 前到达，光线柔和，人也比较少。</div>
+          <div class="warn-item type-tip">Mahanakhon 建议日落前 30 分钟上楼，可以同时看到日落和夜景，一张门票看两种风景。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">08:00 - 08:20</div>
+        <h4 class="activity-title">ASAI 出发</h4>
+        <div class="activity-note">👗 长裤/长裙、肩膀覆盖、防晒、水</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d2-a1" data-label-open="着装与出发准备" data-label-close="收起"><span class="trigger-label">着装与出发准备</span></button>
+        <div class="detail-panel type-warning" id="dp-d2-a1">
+          <div class="detail-panel-inner">
+            <h5>👗 大皇宫着装规定（严格执行）</h5>
+            <p>大皇宫是曼谷着装规定最严的景点，不符合规定者会被拒绝入场，或被要求租借遮蔽衣物（现场租借费用 200 THB，且款式不好看）。</p>
+            <ul>
+              <li><strong>男性</strong>：长裤（不可是七分裤）、有袖上衣（T-shirt 可以，无袖不行）、包覆式鞋子（凉鞋可以，但不可是夹脚拖）。</li>
+              <li><strong>女性</strong>：长裙或长裤、肩膀需覆盖（短袖 T-shirt 可以，细肩带不行）、包覆式鞋子。</li>
+              <li><strong>禁止</strong>：短裤、迷你裙、无袖上衣、露背装、夹脚拖鞋。</li>
+              <li><strong>出发前确认</strong>：两人都穿好再出门，不要到现场才发现不符合规定。</li>
+              <li><strong>防晒准备</strong>：大皇宫户外区域非常晒，SPF 50+ 防晒乳、帽子、墨镜必备。带 500ml 以上的水。</li>
+              <li><strong>雨季备案</strong>：带折叠伞，6 月下午常有短暂阵雨。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">着装严格</span><span class="detail-tag">长裤长裙</span><span class="detail-tag">防晒必备</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">08:20 - 09:30</div>
+        <h4 class="activity-title">BTS + 昭披耶河快船</h4>
+        <div class="activity-details">
+          <span>🚇 BTS Saint Louis → Saphan Taksin → 橘旗船至 Tha Tien Pier</span>
+          <span>💰 约 50 THB</span>
+        </div>
+        <button class="detail-trigger type-tip" data-panel="dp-d2-a2" data-label-open="交通详解" data-label-close="收起"><span class="trigger-label">交通详解</span></button>
+        <div class="detail-panel type-tip" id="dp-d2-a2">
+          <div class="detail-panel-inner">
+            <h5>🚇 BTS + 昭披耶河快船完整指南</h5>
+            <p>用河流进入旧城是这天最有记忆的开场。从 BTS Saphan Taksin 搭昭披耶河快船到 Tha Tien，比坐车更有氛围，也避开早上的塞车。</p>
+            <ul>
+              <li><strong>BTS 路线</strong>：Saint Louis → Saphan Taksin（Silom Line，2 站，约 5 分钟，15-20 THB）。</li>
+              <li><strong>Saphan Taksin 出站</strong>：Exit 2，下楼梯步行不到 1 分钟到 Sathorn Pier（中央码头）。</li>
+              <li><strong>船票购买</strong>：在码头售票亭购买，选「橘旗船」（Chao Phraya Express Boat，橘色旗帜），到 Tha Tien Pier 约 15-20 分钟，票价约 15-30 THB。</li>
+              <li><strong>注意旗帜颜色</strong>：橘旗是普通快船（停靠所有站）；黄旗、绿旗是特快（部分站不停）。到 Tha Tien 要搭橘旗。</li>
+              <li><strong>上船注意</strong>：船靠岸时间很短，要快速上下船。雨季船身可能摇晃，抓好扶手。</li>
+              <li><strong>Tha Tien Pier 下船</strong>：下船后往右走约 5 分钟即到大皇宫入口（Wiset Chaisri Gate）。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">橘旗船</span><span class="detail-tag">Tha Tien Pier</span><span class="detail-tag">15-20 分钟</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">09:30 - 11:30</div>
+        <h4 class="activity-title">大皇宫 + 玉佛寺</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Grand+Palace/@13.7500,100.4913,17z" target="_blank">大皇宫 Grand Palace</a></div>
+        <div class="activity-details">
+          <span>💰 500 THB（外国人票价）</span>
+        </div>
+        <div class="activity-note">📌 只看主轴，不硬塞所有角落</div>
+        <button class="detail-trigger type-place" data-panel="dp-d2-a3" data-label-open="景点深度说明" data-label-close="收起"><span class="trigger-label">景点深度说明</span></button>
+        <div class="detail-panel type-place" id="dp-d2-a3">
+          <div class="detail-panel-inner">
+            <h5>🏛️ 大皇宫 + 玉佛寺完整说明</h5>
+            <p>大皇宫建于 1782 年，是泰国王室的历史核心，也是曼谷最重要的文化地标。玉佛寺（Wat Phra Kaew）位于宫殿建筑群内，供奉泰国最神圣的玉佛像。</p>
+            <ul>
+              <li><strong>票价</strong>：500 THB/人（外国人），含大皇宫 + 玉佛寺 + Dusit Maha Prasat 宫殿群。只接受现金。</li>
+              <li><strong>开放时间</strong>：08:30-15:30（最后入场），建议 09:00-09:30 入场，避开 10:00 后的人潮高峰。</li>
+              <li><strong>主轴路线</strong>：入口 → 玉佛寺（必看）→ 大皇宫主殿（Chakri Maha Prasat）→ Dusit Maha Prasat → 出口。不需要每个角落都走，2 小时足够。</li>
+              <li><strong>玉佛寺注意</strong>：殿内禁止拍照，进入前需脱鞋，保持安静。玉佛一年换三次衣服（夏、雨、冬季），6 月是雨季服装。</li>
+              <li><strong>诈骗警示</strong>：入口附近有人说「今天关闭，带你去其他地方」——这是诈骗，大皇宫几乎每天开放。</li>
+              <li><strong>下次可加</strong>：若有第二次来曼谷，可考虑 Damnoen Saduak 浮动市场（距离 80 公里，需 05:30 出发，适合单人延伸或下次专程安排）。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-grand-palace.jpg" alt="Grand Palace Bangkok golden architecture detail">
+            <div class="detail-tags"><span class="detail-tag">500 THB 现金</span><span class="detail-tag">09:00 入场最佳</span><span class="detail-tag">殿内禁拍照</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:30 - 12:45</div>
+        <h4 class="activity-title">Tha Tien 市场午餐 + 休息</h4>
+        <div class="activity-details">
+          <span>🍜 空调餐厅、泰式小吃</span>
+          <span>💰 150-300 THB</span>
+        </div>
+        <button class="detail-trigger type-tip" data-panel="dp-d2-a4" data-label-open="午餐选项" data-label-close="收起"><span class="trigger-label">午餐选项</span></button>
+        <div class="detail-panel type-tip" id="dp-d2-a4">
+          <div class="detail-panel-inner">
+            <h5>🍜 Tha Tien 午餐完整指南</h5>
+            <p>Tha Tien 市场是大皇宫和郑王庙之间的补给站，有多家餐厅和小吃摊。午餐后必须休息，不要在烈日下硬走到郑王庙。</p>
+            <ul>
+              <li><strong>Tha Tien Market 2F</strong>：有空调的美食广场，泰式炒面、咖哩饭、冬荫功汤，每道 80-150 THB，适合两人各点不同菜色分享。</li>
+              <li><strong>Err Urban Rustic Thai</strong>：Tha Tien 附近的精致泰式小馆，人均约 300-400 THB，需要预订。</li>
+              <li><strong>椰子冰淇淋</strong>：市场外有椰子壳盛装的椰子冰淇淋摊，约 60-80 THB，是这区的标志性小吃。</li>
+              <li><strong>休息策略</strong>：午餐后在有空调的地方坐 30-45 分钟，让身体降温再出发去郑王庙。曼谷 6 月中午气温约 33-36°C，不休息直接走会很痛苦。</li>
+              <li><strong>补水</strong>：午餐时多喝水，郑王庙爬塔需要体力。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">空调必要</span><span class="detail-tag">休息 30-45 分钟</span><span class="detail-tag">椰子冰淇淋</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">13:00 - 14:30</div>
+        <h4 class="activity-title">郑王庙 Wat Arun</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Wat+Arun/@13.7437,100.4888,17z" target="_blank">郑王庙 Wat Arun</a></div>
+        <div class="activity-details">
+          <span>⛴ Tha Tien 渡轮过河（4 THB，每 10 分钟一班）</span>
+          <span>💰 200 THB</span>
+        </div>
+        <button class="detail-trigger type-place" data-panel="dp-d2-a5" data-label-open="景点深度说明" data-label-close="收起"><span class="trigger-label">景点深度说明</span></button>
+        <div class="detail-panel type-place" id="dp-d2-a5">
+          <div class="detail-panel-inner">
+            <h5>🛕 郑王庙 Wat Arun 完整说明</h5>
+            <p>郑王庙（黎明寺）建于 18 世纪，主塔高 79 米，外墙以彩色瓷片和贝壳装饰，是曼谷最具辨识度的地标之一。从对岸看最美，近看细节更惊人。</p>
+            <ul>
+              <li><strong>渡轮</strong>：从 Tha Tien Pier 搭小渡轮过河，票价 4 THB，每 10 分钟一班，船程约 3 分钟。</li>
+              <li><strong>票价</strong>：100 THB/人（外国人，2024 年价格），在入口购票，接受现金和信用卡。</li>
+              <li><strong>开放时间</strong>：08:00-18:00。</li>
+              <li><strong>爬塔注意</strong>：主塔可以爬到中层（约 40 米），阶梯非常陡（约 70 度），穿着包覆式鞋子更安全。下塔时要侧身慢走。</li>
+              <li><strong>最佳拍照位置</strong>：① 渡轮上（过河时）② 主塔前广场 ③ 河岸边（可拍到整座塔和河流）。</li>
+              <li><strong>着装</strong>：同样需要覆盖肩膀和膝盖，与大皇宫相同要求。</li>
+              <li><strong>Autour Asia 建议</strong>：早上参观（避开人潮和热度），但本行程安排在下午，建议 13:00-14:00 参观，避开最热的 12:00-13:00。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-wat-arun.jpg" alt="Wat Arun Bangkok temple spire sunset view">
+            <div class="detail-tags"><span class="detail-tag">渡轮 4 THB</span><span class="detail-tag">100 THB 入场</span><span class="detail-tag">爬塔要小心</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">14:30 - 16:30</div>
+        <h4 class="activity-title">回酒店休息</h4>
+        <div class="activity-note">⚡ 这段休息很重要</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d2-a6" data-label-open="为什么必须休息" data-label-close="收起"><span class="trigger-label">为什么必须休息</span></button>
+        <div class="detail-panel type-warning" id="dp-d2-a6">
+          <div class="detail-panel-inner">
+            <h5>😴 下午休息的重要性</h5>
+            <p>这段休息不是在浪费时间——是为了让晚上的 Mahanakhon 体验更好。曼谷 6 月下午气温 33-36°C，加上高湿度，户外走了 4-5 小时后身体需要恢复。</p>
+            <ul>
+              <li><strong>回酒店方式</strong>：从郑王庙渡轮回 Tha Tien，再叫 Grab 回 ASAI（约 200-300 THB，20-30 分钟）。</li>
+              <li><strong>休息内容</strong>：洗澡、换衣服、补水、小睡 30-60 分钟。</li>
+              <li><strong>15:00 天气决策</strong>：在酒店休息时查看天气预报，决定晚上是否去 Mahanakhon。若有雷雨预报，改为室内备案（Emsphere 或 ICONSIAM 逛街 + 河岸餐厅晚餐）。</li>
+              <li><strong>Mahanakhon 天气标准</strong>：若 17:00-19:00 有雷雨或暴风雨预报，78F 户外观景台会关闭。改期票可以在 App 内操作。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">15:00 看天气</span><span class="detail-tag">洗澡换衣</span><span class="detail-tag">保留晚上体力</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">18:00 之后</div>
+        <h4 class="activity-title">天气决策：晴天 Mahanakhon / 雨天室内</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/King+Power+Mahanakhon/@13.7228,100.5267,17z" target="_blank">Mahanakhon SkyWalk</a>（BTS Chong Nonsi）</div>
+        <div class="activity-details">
+          <span>💰 Klook 预订（约 880 THB）</span>
+        </div>
+        <div class="activity-note">🌤️ 15:00 看天气再决定</div>
+        <button class="detail-trigger type-place" data-panel="dp-d2-a7" data-label-open="Mahanakhon 完整指南" data-label-close="收起"><span class="trigger-label">Mahanakhon 完整指南</span></button>
+        <div class="detail-panel type-place" id="dp-d2-a7">
+          <div class="detail-panel-inner">
+            <h5>🏙️ Mahanakhon SkyWalk 完整体验指南</h5>
+            <p>Mahanakhon（314 米）是曼谷最高建筑，78 楼的玻璃步道（The Peak）可以俯瞰整个曼谷。日落时分入场是最佳选择，可同时看到白天和夜景。</p>
+            <ul>
+              <li><strong>交通</strong>：BTS Chong Nonsi Exit 1，步行约 2 分钟到入口。从酒店搭 BTS Saint Louis → Chong Nonsi（1 站）。</li>
+              <li><strong>建议入场时间</strong>：17:30-18:00，日落约 18:30-19:00，可以看到完整的日落和夜景转换。</li>
+              <li><strong>玻璃步道体验</strong>：78F 户外观景台有透明玻璃地板，可以直视 314 米下的街道。部分人会有恐高感，可以选择只站在边缘不走到中间。</li>
+              <li><strong>雨天备案</strong>：若户外台关闭，室内观景台（74F）仍开放，视野同样壮观。</li>
+              <li><strong>饮料</strong>：顶楼有 bar，鸡尾酒约 350-500 THB，可以在这里看夜景。</li>
+              <li><strong>雨天完全备案</strong>：Emsphere（BTS Phrom Phong）B1 美食街晚餐 + 逛街，或 ICONSIAM 河岸餐厅。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-mahanakhon.jpg" alt="Mahanakhon building Bangkok cityscape night">
+            <div class="detail-tags"><span class="detail-tag">17:30 入场最佳</span><span class="detail-tag">BTS Chong Nonsi</span><span class="detail-tag">雨天有室内备案</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Day 3 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day3-or-tor-kor.jpg"
+           alt="Bangkok market" 
+           loading="lazy"
+           data-phase="couple"
+           data-scene="market">
+      <div class="day-tag">Day 3</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">6/27 周六</div>
+        <h3 class="day-title">日常曼谷：市场、SPA、周末夜市</h3>
+        <p class="day-theme">Or Tor Kor + 泰式按摩 + Rot Fai Srinakarin</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐⭐⭐ 强度：中等</span>
+          <span class="meta-item">🛍️ 市场 + 放松</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这天是「感受曼谷日常生活」的一天。早上不用赶，慢慢起床吃酒店早餐，然后去 Or Tor Kor——这不是观光客去的夜市，而是曼谷人自己买菜的地方。你可以看到堆成小山的芒果、现切的椰子、各种叫不出名字的香料。中午在市场里吃一碗船面或海南鸡饭，价格便宜但味道地道。下午安排泰式按摩，这是泰国文化里「照顾身体」的方式，不是奢侈享受，而是生活必需。晚上去 Rot Fai 周末夜市，这里有复古车、彩灯仓库和街头小吃，是曼谷年轻人周末的聚集地。这一天的节奏是「慢、放松、感受」，不需要赶任何时间。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">Rot Fai 夜市只在周四到周日营业，周六最热闹。如果改期到周日，部分摊位不开，体验会差一些。</div>
+          <div class="warn-item type-warning">这天是全天行程最长的一天，从早上 09:30 到晚上 22:30，带足够的水和充电宝。</div>
+          <div class="warn-item type-tip">Or Tor Kor 的午餐选择很多，建议 11:00-12:00 到达，避开 12:30 后的本地人潮。</div>
+          <div class="warn-item type-tip">SPA 后回酒店洗澡换衣服，再去夜市会舒服很多。夜市人多拥挤，穿轻便一点。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">09:30 - 10:30</div>
+        <h4 class="activity-title">慢起床 + 酒店早餐</h4>
+        <div class="activity-note">☕ 不早起冲景点</div>
+        <button class="detail-trigger type-tip" data-panel="dp-d3-a1" data-label-open="早餐选项" data-label-close="收起"><span class="trigger-label">早餐选项</span></button>
+        <div class="detail-panel type-tip" id="dp-d3-a1">
+          <div class="detail-panel-inner">
+            <h5>☕ Day 3 慢启动策略</h5>
+            <p>Day 3 是周六，Or Tor Kor 市场 11:00 才去，晚上 Rot Fai 夜市到 22:30，是全天最长的一天。早上慢慢来，体力才能撑到晚上。</p>
+            <ul>
+              <li><strong>ASAI 早餐</strong>：1-2-3 by ASAI 餐厅，07:00-10:00，自助式，含泰式和西式选项，约 350-450 THB/人（若未含在房价内）。</li>
+              <li><strong>附近咖啡选项</strong>：Convent Road 上有多家咖啡馆，步行 5 分钟可达。推荐 Roots Coffee（精品咖啡，约 120-180 THB）。</li>
+              <li><strong>今日节奏</strong>：09:30 起床 → 10:00 早餐 → 10:45 出发 Or Tor Kor → 15:00 SPA → 19:30 Rot Fai 夜市。</li>
+              <li><strong>补水提醒</strong>：今天行程长，早餐时多喝水，带 600ml 水瓶出门。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">周六慢启动</span><span class="detail-tag">10:45 出发</span><span class="detail-tag">全天最长</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:00 - 12:30</div>
+        <h4 class="activity-title">Or Tor Kor Market</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Or+Tor+Kor+Market/@13.7990,100.5500,17z" target="_blank">Or Tor Kor Market</a></div>
+        <div class="activity-details">
+          <span>🚇 MRT Kamphaeng Phet Exit 3，步行 3 分钟</span>
+          <span>💰 100-250 THB</span>
+        </div>
+        <div class="activity-note">🥭 必看：当季芒果糯米饭、Khao Kluk Kapi（虾酱饭）、水果区</div>
+        <button class="detail-trigger type-place" data-panel="dp-d3-a2" data-label-open="市场深度说明" data-label-close="收起"><span class="trigger-label">市场深度说明</span></button>
+        <div class="detail-panel type-place" id="dp-d3-a2">
+          <div class="detail-panel-inner">
+            <h5>🥭 Or Tor Kor Market 完整指南</h5>
+            <p>Or Tor Kor（อ.ต.ก.）是泰国农业合作社直营市场，被 CNN Travel 评为亚洲前四名最佳市场。以高品质新鲜食材和熟食著称，是曼谷中产阶级的日常采买地。</p>
+            <ul>
+              <li><strong>交通</strong>：MRT Kamphaeng Phet Exit 3，出站后往右走约 3 分钟。与 Chatuchak 周末市场相邻，但风格完全不同。</li>
+              <li><strong>开放时间</strong>：每日 06:00-18:00，周末人较多但不拥挤。</li>
+              <li><strong>必吃</strong>：① 芒果糯米饭（Khao Niao Mamuang，约 80-120 THB）② Khao Kluk Kapi 虾酱炒饭（约 60-80 THB）③ 新鲜榴梿（6 月是榴梿季！）④ 各种热带水果切盘。</li>
+              <li><strong>水果区</strong>：二楼有整排新鲜水果摊，品质远高于路边摊，价格也合理。6 月是芒果、榴梿、山竹的旺季。</li>
+              <li><strong>熟食区</strong>：一楼有多家熟食摊，可以当午餐。建议各自点不同菜色分享。</li>
+              <li><strong>注意</strong>：这里不是观光市场，没有英文菜单，用手指或 Google 翻译点餐。现金为主，部分摊位接受 QR Code。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/day3-or-tor-kor.jpg" alt="Bangkok market fresh produce">
+            <div class="detail-tags"><span class="detail-tag">亚洲前四市场</span><span class="detail-tag">榴梿季</span><span class="detail-tag">MRT Kamphaeng Phet</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">15:00 - 17:00</div>
+        <h4 class="activity-title">泰式按摩（SPA）</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/search/Health+Land+Silom+Bangkok/@13.7234,100.5278,15z" target="_blank">Health Land Silom / Asia Herb Association Sathorn</a></div>
+        <div class="activity-details">
+          <span>💰 500-800 THB（2 小时）</span>
+        </div>
+        <div class="activity-note">📌 需提前 3 天预订</div>
+        <button class="detail-trigger type-place" data-panel="dp-d3-a3" data-label-open="SPA 完整指南" data-label-close="收起"><span class="trigger-label">SPA 完整指南</span></button>
+        <div class="detail-panel type-place" id="dp-d3-a3">
+          <div class="detail-panel-inner">
+            <h5>💆 泰式按摩 SPA 完整体验指南</h5>
+            <p>泰式按摩是这趟旅行最重要的「身体记忆」之一。选择正规 SPA 馆而非路边按摩店，体验差距非常大。以下三家都在 Silom/Sathorn 区，步行或短程 BTS 可达。</p>
+            <ul>
+              <li><strong>Health Land Silom</strong>：地址 120 North Sathorn Rd，MRT Lumphini 步行 5 分钟。2 小时泰式按摩 650 THB，环境整洁，服务稳定，是性价比最高的选择。</li>
+              <li><strong>Asia Herb Association Sathorn</strong>：地址 Sathorn Soi 1，草药球按摩著名，2 小时约 900-1,200 THB，环境较精致，适合想要更高品质体验的情侣。</li>
+              <li><strong>Let's Relax Silom</strong>：连锁品牌，品质稳定，可线上预订，2 小时约 800-1,000 THB。</li>
+              <li><strong>按摩前注意</strong>：按摩前 1 小时不要吃太饱；告知按摩师力道偏好（轻/中/重）；若有受伤部位提前说明。</li>
+              <li><strong>着装</strong>：馆方会提供换洗衣物，带一套换洗内衣即可。</li>
+              <li><strong>小费</strong>：惯例 50-100 THB/人，按摩结束后直接给按摩师。</li>
+              <li><strong>Autour Asia 建议</strong>：按摩后不要立刻做剧烈活动，让身体有 30 分钟缓冲再出发夜市。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">提前 3 天预订</span><span class="detail-tag">小费 50-100 THB</span><span class="detail-tag">按摩后缓冲 30 分钟</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">19:30 - 22:30</div>
+        <h4 class="activity-title">Rot Fai Srinakarin 周末夜市</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Talad+Rod+Fai+Srinakarin/@13.7234,100.6500,15z" target="_blank">Rot Fai Srinakarin Night Market</a></div>
+        <div class="activity-details">
+          <span>🚗 Grab（18:45 出发，避开尖峰）</span>
+          <span>💰 300-400 THB（Grab）+ 500-800 THB（夜市）</span>
+        </div>
+        <div class="activity-note">🎡 复古车、彩灯仓库、街头小吃、二手市集｜仅周四-周日 17:00-01:00 营业</div>
+        <button class="detail-trigger type-place" data-panel="dp-d3-a4" data-label-open="夜市完整指南" data-label-close="收起"><span class="trigger-label">夜市完整指南</span></button>
+        <div class="detail-panel type-place" id="dp-d3-a4">
+          <div class="detail-panel-inner">
+            <h5>🎡 Rot Fai Srinakarin 夜市完整指南</h5>
+            <p>Rot Fai Srinakarin（铁道夜市 Srinakarin）是曼谷最大的周末夜市，以复古美式风格、彩灯仓库和多元街头小吃著称。与 Or Tor Kor 的日常市场形成强烈反差，是 Day 3 的记忆高点。</p>
+            <ul>
+              <li><strong>营业时间</strong>：周四至周日 17:00-01:00。6/27 是周六，完全符合。</li>
+              <li><strong>交通（推荐 MRT）</strong>：从 ASAI 搭 BTS 至 Sala Daeng → 换乘 MRT 至 Lat Phrao → 换乘 MRT 黄线至 Suan Luang Rama IX 站，步行 5-10 分钟即达。全程约 50 分钟，费用约 60 THB，完美避开周六傍晚塞车。备案：Grab 约 150-200 THB，但可能塞车 1 小时以上。</li>
+              <li><strong>必逛区域</strong>：① 复古车展示区（美式老车、摩托车）② 彩灯仓库（各种小吃摊）③ 二手古着市集 ④ 街头表演区。</li>
+              <li><strong>必吃</strong>：泰式烤肉串（Moo Ping）、炸鸡、芒果糯米饭、泰式奶茶、椰子冰淇淋。</li>
+              <li><strong>预算</strong>：两人吃喝约 500-800 THB，若买东西另计。</li>
+              <li><strong>回程</strong>：22:00-22:30 搭 MRT 黄线返回（末班车约 00:00），或叫 Grab 回酒店（避开 23:00 后的散场人潮，车资约 150-200 THB）。</li>
+              <li><strong>注意</strong>：夜市人多，注意随身物品。现金为主，部分摊位接受 QR Code。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-rot-fai.jpg" alt="Bangkok night market">
+            <div class="detail-tags"><span class="detail-tag">周四-周日限定</span><span class="detail-tag">MRT 黄线直达</span><span class="detail-tag">22:00 回程</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Day 4 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day4-iconsiam.jpg" 
+           alt="Chao Phraya River Bangkok canal" 
+           loading="lazy"
+           data-phase="couple"
+           data-scene="waterfront">
+      <div class="day-tag">Day 4</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">6/28 周日</div>
+        <h3 class="day-title">水边曼谷与河岸晚宴</h3>
+        <p class="day-theme">Khlong Bang Luang 运河社区 + Saffron 河岸晚餐</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐⭐⭐ 强度：中等</span>
+          <span class="meta-item">🌊 河岸主题</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这天是双人成行的最后一个完整日，节奏故意放慢。上午去 Khlong Bang Luang，这是曼谷保存最好的百年运河社区，没有观光客的喧嚣，只有木造老屋、运河上的小船和岸边的咖啡馆。你可以坐在运河边，看当地人怎么过他们的日常——这就是曼谷「水上市场」真正的样子，不是观光船，而是生活。下午回酒店休息，晚上去 ICONSIAM 搭 Saffron 游船，沿着昭披耶河吃晚餐。这是双人成行的最后一晚，让这座城市用它的方式陪伴你们。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">Saffron Cruise 需提前预订，雨季可能因天候取消，建议 15:00 前再次确认。</div>
+          <div class="warn-item type-warning">ICONSIAM 码头在 Pier 1，不是 Pier 2，登船前确认码头编号。</div>
+          <div class="warn-item type-tip">这是双人成行最后一个完整日，不要排太满，保留说话和散步的空间。</div>
+          <div class="warn-item type-tip">运河社区下午较热，带伞和足够的水。这里不收信用卡，记得带现金。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">09:30 - 10:30</div>
+        <h4 class="activity-title">慢起床 + 酒店早餐</h4>
+        <button class="detail-trigger type-tip" data-panel="dp-d4-a1" data-label-open="Day 4 节奏说明" data-label-close="收起"><span class="trigger-label">Day 4 节奏说明</span></button>
+        <div class="detail-panel type-tip" id="dp-d4-a1">
+          <div class="detail-panel-inner">
+            <h5>☕ Day 4 节奏设计</h5>
+            <p>Day 4 是双人成行最后一个完整日，强度设计为中等（⭐⭐），上午轻松的运河社区，下午休息，晚上 Saffron 游船作为最后一晚的高点。</p>
+            <ul>
+              <li><strong>今日节奏</strong>：09:30 慢起 → 11:00 出发 Khlong Bang Luang → 13:30 回酒店午休 → 16:30 出发 ICONSIAM → 18:30 Saffron check-in → 22:00 回酒店。</li>
+              <li><strong>着装建议</strong>：上午运河社区穿轻便透气衣物；晚上 Saffron 需要 Smart Casual，建议带换洗衣物或直接穿好出门。</li>
+              <li><strong>重要提醒</strong>：今天是女友在曼谷的最后一个完整晚上，不要让行程太赶，保留说话的空间。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">最后完整日</span><span class="detail-tag">中等强度</span><span class="detail-tag">Smart Casual 备好</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:00 - 13:00</div>
+        <h4 class="activity-title">Khlong Bang Luang 运河木屋社区 / Artist's House</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Khlong+Bang+Luang+Artist%27s+House/@13.7234,100.4700,16z" target="_blank">Khlong Bang Luang Artist's House</a></div>
+        <div class="activity-details">
+          <span>🚗 Grab（单程 25-35 分钟）</span>
+          <span>💰 150-250 THB（Grab）+ 免费入场</span>
+        </div>
+        <div class="activity-note">🏘️ 百年木造老屋群、运河步道、艺廊、咖啡馆、偶有皮影戏表演（10:00-18:00）</div>
+        <button class="detail-trigger type-place" data-panel="dp-d4-a2" data-label-open="景点深度说明" data-label-close="收起"><span class="trigger-label">景点深度说明</span></button>
+        <div class="detail-panel type-place" id="dp-d4-a2">
+          <div class="detail-panel-inner">
+            <h5>🏘️ Khlong Bang Luang 运河社区完整说明</h5>
+            <p>Khlong Bang Luang 是曼谷保存最完整的百年运河木屋社区，远离观光人潮，是真实的曼谷水系生活样本。Artist's House（Baan Silapin）是其中最著名的艺术空间，定期举办皮影戏表演。</p>
+            <ul>
+              <li><strong>交通</strong>：从 ASAI 叫 Grab，约 25-35 分钟，车资 150-250 THB。没有直达的 BTS/MRT，Grab 是唯一选择。</li>
+              <li><strong>Artist's House（Baan Silapin）</strong>：百年木造老屋改建的艺廊，免费入场，有咖啡馆和手工艺品。皮影戏表演时间不固定，通常周末 14:00 有场次，建议提前查询 Facebook。</li>
+              <li><strong>运河步道</strong>：沿着运河有木板步道，可以看到传统木造房屋、小船、和日常生活场景。这是曼谷最接近「非观光」的水系体验。</li>
+              <li><strong>咖啡馆</strong>：社区内有几家小咖啡馆，在运河边喝咖啡是这里最好的体验方式。</li>
+              <li><strong>注意</strong>：木板步道部分路段较窄，雨季后可能湿滑，穿防滑鞋。带现金，这里不接受信用卡。</li>
+              <li><strong>回程</strong>：在社区内叫 Grab 回酒店，信号可能稍差，走到主路再叫车。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-khlong-bang.jpg" alt="Bangkok canal community">
+            <div class="detail-tags"><span class="detail-tag">免费入场</span><span class="detail-tag">非观光水系</span><span class="detail-tag">带现金</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">16:30 - 18:20</div>
+        <h4 class="activity-title">前往 ICONSIAM + 河岸散步</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/ICONSIAM/@13.7234,100.5100,16z" target="_blank">ICONSIAM</a></div>
+        <div class="activity-details">
+          <span>🚇 BTS Saint Louis → Saphan Taksin → 渡船/Gold Line</span>
+        </div>
+        <div class="activity-note">⏰ 16:30 出发（不是 17:00）— 预留 80 分钟缓冲时间找 Pier 1</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d4-a3" data-label-open="前往 ICONSIAM 详解" data-label-close="收起"><span class="trigger-label">前往 ICONSIAM 详解</span></button>
+        <div class="detail-panel type-warning" id="dp-d4-a3">
+          <div class="detail-panel-inner">
+            <h5>🚇 前往 ICONSIAM + 找到 Pier 1 的完整指南</h5>
+            <p>16:30 出发是底线，不能更晚。Saffron Cruise 18:30 check-in，找到 Pier 1 需要时间，加上周日下午可能塞车，必须预留 80 分钟缓冲。</p>
+            <ul>
+              <li><strong>交通路线 A（推荐）</strong>：BTS Saint Louis → Saphan Taksin（2 站）→ 出站搭 ICONSIAM 免费接驳船（每 30 分钟一班，从 Sathorn Pier 出发）。</li>
+              <li><strong>交通路线 B</strong>：BTS Saint Louis → Krung Thon Buri（换 Gold Line）→ Charoen Nakhon → 步行到 ICONSIAM。</li>
+              <li><strong>Pier 1 位置</strong>：进入 ICONSIAM 后，往河岸方向走，看到「Saffron」或「Pier 1」指标。Pier 1 在商场外侧河岸，不在商场内部。</li>
+              <li><strong>提前到达的好处</strong>：可以在 ICONSIAM 内逛逛（SookSiam 室内水上市场在 G 层，免费入场），或在河岸边拍照。</li>
+              <li><strong>着装确认</strong>：到 ICONSIAM 后确认两人着装符合 Smart Casual 要求，若需要换衣服可以在商场洗手间换。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">16:30 出发底线</span><span class="detail-tag">Pier 1 在河岸外侧</span><span class="detail-tag">80 分钟缓冲</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">18:30 Check-in｜19:00 - 22:00</div>
+        <h4 class="activity-title">Saffron Cruise 昭披耶河晚餐游船</h4>
+        <div class="activity-details">
+          <span>⛴ ICONSIAM Pier 1 check-in → Pier 2 登船</span>
+          <span>💰 Klook 预订（含晚餐，约 2,000-2,500 THB）</span>
+        </div>
+        <div class="activity-note">🌃 最后一晚看河｜Smart Casual 着装｜必须提前 7 天订票</div>
+        <button class="detail-trigger type-place" data-panel="dp-d4-a4" data-label-open="Saffron Cruise 完整指南" data-label-close="收起"><span class="trigger-label">Saffron Cruise 完整指南</span></button>
+        <div class="detail-panel type-place" id="dp-d4-a4">
+          <div class="detail-panel-inner">
+            <h5>⛴️ Saffron Cruise 完整体验指南</h5>
+            <p>Saffron Cruise 是昭披耶河上的高端晚餐游船，以精致泰式料理和河岸夜景著称。这是双人成行最重要的一个夜晚，设计为「最后一晚看河」的珍贵记忆。</p>
+            <ul>
+              <li><strong>流程</strong>：18:30 在 Pier 1 check-in → 工作人员引导到 Pier 2 登船 → 19:00 准时开船 → 沿昭披耶河游览（途经大皇宫、郑王庙、Asiatique）→ 22:00 返回 Pier 2。</li>
+              <li><strong>餐点</strong>：含自助式泰式料理（冬荫功、泰式咖哩、海鲜、甜点），饮料另计（约 150-300 THB/杯）。</li>
+              <li><strong>着装</strong>：Smart Casual 严格执行。男性：长裤 + 有领上衣。女性：洋装或长裤套装。拖鞋、短裤、无袖上衣会被拒绝登船。</li>
+              <li><strong>拍照建议</strong>：船行经大皇宫和郑王庙时（约 19:30-20:00）是最佳拍照时机，两岸灯光最美。</li>
+              <li><strong>回程</strong>：22:00 下船后在 ICONSIAM 附近叫 Grab 回酒店，约 200-300 THB，20-30 分钟。</li>
+              <li><strong>这个夜晚的意义</strong>：不要把 Saffron 当成「烛光晚餐」，而是「一起在河上看这座城市」。重点是河流、夜景和两人的对话，不是食物的精致程度。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-cruise.jpg" alt="Chao Phraya River night">
+            <div class="detail-tags"><span class="detail-tag">19:00 准时开船</span><span class="detail-tag">Smart Casual 严格</span><span class="detail-tag">22:00 下船</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Day 5 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day5-departure.jpg" 
+           alt="Bangkok airport" 
+           loading="lazy"
+           data-phase="couple"
+           data-scene="farewell">
+      <div class="day-tag">Day 5</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">6/29 周一</div>
+        <h3 class="day-title">从容送别 + 单人启程</h3>
+        <p class="day-theme">早餐 + 送机（HU430 13:50 → PEK）</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐ 强度：轻松</span>
+          <span class="meta-item">✈️ 送机日</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这天没有景点，只有「送别时刻」。早上在酒店慢慢吃早餐，这是双人成行最后一个共同时刻。在早餐时聊聊这几天最喜欢的画面——不是什么特别的仪式，只是让这段旅程有个温柔的收尾。10:15 前出发去机场，雨季突发状况多，时间要留足。送机后，你会回到一个人的酒店房间，单人行程从这天下午正式开始。先休息，让节奏自然转换。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">10:15 是最晚离开酒店的时间，建议 10:00 就开始叫 Grab，雨季塞车无法预测。</div>
+          <div class="warn-item type-warning">充电宝必须放在随身行李，不可托运。这是安检最严格检查的项目之一。</div>
+          <div class="warn-item type-tip">早餐时聊聊「这几天最喜欢的画面」，这会成为你们之后提起曼谷时，最先想到的故事。</div>
+          <div class="warn-item type-tip">送机后回酒店休息，单人延伸今晚才开始。不需要急着跑行程，先让自己适应一个人的节奏。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">08:00 - 09:00</div>
+        <h4 class="activity-title">酒店早餐 / 附近咖啡</h4>
+        <div class="activity-note">☕ 不跨区，ASAI 或 Convent Road</div>
+        <button class="detail-trigger type-tip" data-panel="dp-d5-a1" data-label-open="最后早餐说明" data-label-close="收起"><span class="trigger-label">最后早餐说明</span></button>
+        <div class="detail-panel type-tip" id="dp-d5-a1">
+          <div class="detail-panel-inner">
+            <h5>☕ 从容送别的早餐设计</h5>
+            <p>这顿早餐是双人成行的最后一个共同时刻。设计原则是「不赶、不跨区、有说话的空间」。不要为了吃一家特别的早餐而增加压力。</p>
+            <ul>
+              <li><strong>ASAI 酒店早餐</strong>：最方便，不需要出门，可以慢慢吃到 09:00。适合昨晚 Saffron 回来较晚、需要多睡一点的情况。</li>
+              <li><strong>Convent Road 咖啡馆</strong>：步行 5 分钟，有几家咖啡馆，适合想要最后一次在曼谷街道散步的感觉。</li>
+              <li><strong>早餐对话建议</strong>：V5.0 规划书建议「说最喜欢的画面」——各自说这几天最喜欢的一个场景或时刻。这比任何景点都更有记忆价值。</li>
+              <li><strong>时间控制</strong>：09:00 前结束早餐，开始整理行李。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">不跨区</span><span class="detail-tag">09:00 前结束</span><span class="detail-tag">说最喜欢的画面</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">09:00 - 09:45</div>
+        <h4 class="activity-title">整理行李</h4>
+        <div class="activity-note">✈️ 护照、TDAC、充电宝、机票、退税单分开确认</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d5-a2" data-label-open="行李确认清单" data-label-close="收起"><span class="trigger-label">行李确认清单</span></button>
+        <div class="detail-panel type-warning" id="dp-d5-a2">
+          <div class="detail-panel-inner">
+            <h5>🧳 女友出发前行李确认清单</h5>
+            <p>HU430 是国际航班，需要提前 3 小时到机场。行李确认要在 09:45 前完成，10:15 准时出发。</p>
+            <ul>
+              <li><strong>随身行李必备</strong>：护照（确认在包包最外层）、TDAC QR Code（截图在手机相簿）、机票确认信（截图或 PDF）、充电宝（随身，不可托运）。</li>
+              <li><strong>退税单</strong>：若在曼谷有购物退税（VAT Refund），退税单和收据放在随身包，机场办理退税在出境安检前。</li>
+              <li><strong>托运行李</strong>：确认行李箱重量不超过航空公司限制（HU430 通常 23kg）。充电宝、打火机、液体超过 100ml 不可放托运。</li>
+              <li><strong>剩余泰铢</strong>：留约 200-300 THB 备用（机场餐饮），多余的可以在机场换回或留着下次用。</li>
+              <li><strong>你的行李</strong>：你不需要整理全部行李，只需要确认女友的行李没有问题，你的行李可以等她离开后再整理。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">09:45 前完成</span><span class="detail-tag">充电宝随身</span><span class="detail-tag">退税单备好</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">10:15 - 11:15</div>
+        <h4 class="activity-title">ASAI → 素万那普机场 BKK</h4>
+        <div class="activity-details">
+          <span>🚗 Grab（雨季抓 60 分钟以上）</span>
+          <span>💰 300-450 THB</span>
+        </div>
+        <div class="activity-note">⏰ 最晚 10:15 离开酒店（国际航班起飞前 3 小时）</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d5-a3" data-label-open="送机交通详解" data-label-close="收起"><span class="trigger-label">送机交通详解</span></button>
+        <div class="detail-panel type-warning" id="dp-d5-a3">
+          <div class="detail-panel-inner">
+            <h5>🚗 送机交通完整指南</h5>
+            <p>10:15 是最晚出发时间，不能更晚。雨季曼谷早上塞车情况不稳定，必须预留足够缓冲。</p>
+            <ul>
+              <li><strong>出发时间</strong>：10:15 是底线。若 10:00 前行李整理完成，可以提早出发。</li>
+              <li><strong>Grab 叫车</strong>：10:00 就开始叫车，不要等到 10:15 才叫。雨季早上 Grab 需求高，等待时间可能 10-15 分钟。</li>
+              <li><strong>车资</strong>：300-450 THB，含高速公路费。告诉司机走高速（Expressway），节省时间。</li>
+              <li><strong>雨季风险</strong>：Sathorn 到素万那普正常 45-60 分钟，雨季塞车可能 90 分钟。10:15 出发 → 11:45 最晚到机场，距离 13:50 起飞还有 2 小时，勉强够用。</li>
+              <li><strong>机场送别</strong>：到机场后陪她到出境安检口，确认她进去后再离开。不需要等到登机，安检后就可以道别。</li>
+              <li><strong>你的下午</strong>：送机后你的单人延伸正式开始。可以在机场附近吃午餐，或直接叫 Grab 回酒店开始 Day 6 的准备。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">10:00 开始叫车</span><span class="detail-tag">走高速</span><span class="detail-tag">雨季预留 90 分钟</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">13:50</div>
+        <h4 class="activity-title">海南航空 HU430 起飞 BKK → PEK</h4>
+        <div class="activity-details">
+          <span>✈️ 到达北京 PEK 约 19:55-20:15</span>
+        </div>
+        <button class="detail-trigger type-tip" data-panel="dp-d5-a4" data-label-open="单人启程" data-label-close="收起"><span class="trigger-label">单人启程</span></button>
+        <div class="detail-panel type-tip" id="dp-d5-a4">
+          <div class="detail-panel-inner">
+            <h5>🎒 单人延伸正式开始</h5>
+            <p>13:50 HU430 起飞后，你的单人研究行程正式开始。接下来 3 天（6/29 下午 - 7/2）是高强度的田野研究段。</p>
+            <ul>
+              <li><strong>今天下午</strong>：不需要立刻开始研究。送机后吃午餐，回酒店休息，整理前 5 天的笔记和照片。</li>
+              <li><strong>明天（Day 6）</strong>：Song Wat + Talat Noi + Jim Thompson，全行程研究价值最高的一天，需要充足体力。</li>
+              <li><strong>心理切换</strong>：从「双人模式」切换到「研究者模式」。节奏、目标、决策方式都不同。</li>
+              <li><strong>今晚建议</strong>：早睡，明天 09:00 出发，需要充足睡眠。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">单人启程</span><span class="detail-tag">今晚早睡</span><span class="detail-tag">明天 09:00 出发</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Solo Phase -->
+<section id="solo-phase" class="section">
+  <div class="phase-separator">
+    <h2 class="phase-title">单人研究行程</h2>
+    <p class="phase-desc">6/29 下午 - 7/2｜深度田野：Song Wat、Talat Noi、Jim Thompson</p>
+  </div>
+
+  <!-- Day 6 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day6-song-wat.jpg" 
+           alt="Bangkok old town" 
+           loading="lazy"
+           data-phase="solo"
+           data-scene="fieldwork">
+      <div class="day-tag">Day 6</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">6/30 周二</div>
+        <h3 class="day-title">Song Wat、Talat Noi、Jim Thompson</h3>
+        <p class="day-theme">华人街区深度田野</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐⭐⭐⭐ 强度：高</span>
+          <span class="meta-item">🏛️ 文化探索</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">单人延伸的第一天，也是整趟旅行「密度最高」的一天。你会走进曼谷最古老的华人街区——Song Wat 和 Talat Noi。这里不是观光地图上的景点，而是活生生的历史：百年街屋的墙面上还留着旧时商号的招牌，巷弄里有家族经营五代的五金行，转角处突然出现一间由老仓库改造成的咖啡馆。这些地方没有导览牌，没有解说员，你需要自己观察、记录、提问。下午去 Jim Thompson Art Center，这位美国丝绸商人的故居是「东方与西方相遇」的缩影——他的故事本身就是一则关于文化交融的寓言。带笔记本，这天你会有很多想记下来的东西。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">这是单人延伸强度最高的一天，几乎全程步行，需要充足体力和防晒。前一晚务必早睡。</div>
+          <div class="warn-item type-warning">老建筑内仍有居民居住，拍照时保持尊重，不要擅闯私人空间或拍摄屋内。</div>
+          <div class="warn-item type-tip">早上光线最佳，建议 09:00 准时出发。柔和的光线会让老建筑的细节更立体。</div>
+          <div class="warn-item type-tip">带笔记本或开启手机录音，这是研究价值最高的一天，灵感来得很快，也容易忘。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">09:00 - 12:00</div>
+        <h4 class="activity-title">Song Wat 遗产社区</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Song+Wat+Road/@13.7380,100.5100,16z" target="_blank">Song Wat Road Heritage Community</a></div>
+        <div class="activity-details">
+          <span>🚇 MRT Sanam Chai Exit 1</span>
+        </div>
+        <div class="activity-note">🏛️ 华人遗产建筑、街屋、咖啡馆、文创空间</div>
+        <button class="detail-trigger type-place" data-panel="dp-d6-a1" data-label-open="田野研究说明" data-label-close="收起"><span class="trigger-label">田野研究说明</span></button>
+        <div class="detail-panel type-place" id="dp-d6-a1">
+          <div class="detail-panel-inner">
+            <h5>🏛️ Song Wat Road 田野研究完整指南</h5>
+            <p>Song Wat Road 是曼谷旧城区保存最完整的华人遗产街道，近年经历创意再生，老仓库和街屋被改造为咖啡馆、艺廊和文创空间，同时保留了原有的社区生活肌理。</p>
+            <ul>
+              <li><strong>交通</strong>：MRT Sanam Chai Exit 1，出站后步行约 10-15 分钟到 Song Wat Road 起点。或叫 Grab 直达。</li>
+              <li><strong>研究重点</strong>：① 街屋立面的历史层次（中式、葡式、现代改造）② 新旧业态并存（老五金行 vs 精品咖啡馆）③ 社区居民与观光客的空间使用方式。</li>
+              <li><strong>必访地点</strong>：① Warehouse 30（创意空间，前身是二战时期仓库）② 街屋建筑与本地店家（Uraiwan 蜡烛店、传统商号）③ 新兴咖啡馆与艺廊（Woodbrook、FV 等老屋活化代表）。</li>
+              <li><strong>田野笔记建议</strong>：记录街道立面的材质和颜色变化、新旧招牌的并置、居民日常活动的时间分布。</li>
+              <li><strong>拍照建议</strong>：早上光线从东方照入，街道阴影丰富，是最佳拍照时段。</li>
+              <li><strong>注意</strong>：部分老建筑仍有居民居住，拍照时保持尊重，不要进入私人空间。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/detail-talat-noi.jpg" alt="Bangkok heritage street">
+            <div class="detail-tags"><span class="detail-tag">MRT Sanam Chai</span><span class="detail-tag">Warehouse 30</span><span class="detail-tag">早上光线最佳</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">13:00 - 16:00</div>
+        <h4 class="activity-title">Talat Noi</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Talat+Noi/@13.7380,100.5050,16z" target="_blank">Talat Noi</a></div>
+        <div class="activity-note">🎨 老街区、壁画、五金行、河岸风景</div>
+        <button class="detail-trigger type-place" data-panel="dp-d6-a2" data-label-open="田野研究说明" data-label-close="收起"><span class="trigger-label">田野研究说明</span></button>
+        <div class="detail-panel type-place" id="dp-d6-a2">
+          <div class="detail-panel-inner">
+            <h5>🎨 Talat Noi 田野研究完整指南</h5>
+            <p>Talat Noi（小市场）是曼谷最古老的华人社区之一，以汽车零件和五金行著称，近年因街头壁画和咖啡馆而成为文青聚集地。与 Song Wat 相邻，步行可达。</p>
+            <ul>
+              <li><strong>交通</strong>：从 Song Wat 步行约 10-15 分钟，或叫 Grab。MRT Hua Lamphong 步行约 15 分钟。</li>
+              <li><strong>研究重点</strong>：① 汽车零件业的空间分布（这是曼谷独特的都市产业景观）② 壁画与老建筑的视觉冲突 ③ 庙宇（Kuan Im Shrine）在社区中的角色。</li>
+              <li><strong>必访地点</strong>：① Kuan Im Shrine（观音庙，社区信仰中心）② 各条小巷的壁画 ③ 河岸边的老仓库。</li>
+              <li><strong>午餐选项</strong>：Talat Noi 有几家老字号中式餐厅，推荐 Nai Mong Hoi Thod（蚵仔煎，约 80-120 THB）。</li>
+              <li><strong>田野笔记建议</strong>：记录五金行的空间使用、壁画的主题和位置、新旧业态的地理分布。</li>
+              <li><strong>注意</strong>：下午气温高，带足够的水。部分小巷较窄，注意来往的摩托车。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">步行距离 Song Wat</span><span class="detail-tag">五金行景观</span><span class="detail-tag">蚵仔煎午餐</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">16:30 - 18:30</div>
+        <h4 class="activity-title">Jim Thompson Art Center</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Jim+Thompson+Art+Center/@13.7450,100.5280,16z" target="_blank">Jim Thompson Art Center</a></div>
+        <div class="activity-details">
+          <span>🚇 MRT Sam Yan</span>
+          <span>💰 免费入场</span>
+        </div>
+        <div class="activity-note">🎨 当代艺术展览、泰丝收藏</div>
+        <button class="detail-trigger type-place" data-panel="dp-d6-a3" data-label-open="景点说明" data-label-close="收起"><span class="trigger-label">景点说明</span></button>
+        <div class="detail-panel type-place" id="dp-d6-a3">
+          <div class="detail-panel-inner">
+            <h5>🎨 Jim Thompson Art Center 完整说明</h5>
+            <p>Jim Thompson Art Center 是以美国商人 Jim Thompson（泰丝复兴者）命名的当代艺术空间，位于 Sam Yan 区，免费入场，定期举办当代艺术展览。</p>
+            <ul>
+              <li><strong>交通</strong>：MRT Sam Yan Exit 1，步行约 5 分钟。从 Talat Noi 叫 Grab 约 15-20 分钟。</li>
+              <li><strong>开放时间</strong>：周二至周日 10:00-18:00，周一休馆。6/30 是周二，正常开放。</li>
+              <li><strong>展览内容</strong>：以泰国当代艺术为主，定期更换展览。建议出发前查询官网确认当期展览。</li>
+              <li><strong>Jim Thompson 的故事</strong>：Jim Thompson 是 1940-60 年代将泰丝推向国际市场的美国人，1967 年在马来西亚神秘失踪，至今未解。他的故事本身就是一个值得研究的文化现象。</li>
+              <li><strong>附近</strong>：Sam Yan Mitrtown 商场在旁边，可以在这里吃晚餐（美食广场，约 100-200 THB）。</li>
+              <li><strong>今日收尾</strong>：参观完后在 Sam Yan 附近吃晚餐，搭 MRT 回酒店，今天走了很多路，早点休息。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">免费入场</span><span class="detail-tag">MRT Sam Yan</span><span class="detail-tag">周一休馆</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Day 7 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day7-library.jpg" 
+           alt="Bangkok contemporary city" 
+           loading="lazy">
+      <div class="day-tag">Day 7</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">7/1 周三</div>
+        <h3 class="day-title">研究日备援或深度补充</h3>
+        <p class="day-theme">弹性安排</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐⭐ 强度：弹性</span>
+          <span class="meta-item">🔄 备用时间</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这天没有固定行程，是留给你自己的「呼吸空间」。Day 6 的强度很高，你可能会想多睡一会，或者在咖啡馆里整理昨天的笔记——这不是浪费时间，是让信息沉淀的必要过程。如果你还有体力，可以回头补完 Song Wat 或 Talat Noi 没走完的巷弄；如果想探索新的区域，Bangkok City Library 或 MRT Yellow Line 沿线是两个方向。但记得，这天的真正目的是「恢复」，不是「赶路」。明天还有 One Bangkok，今晚早点睡。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">选项 B（Bangkok City Library / Yellow Line）体力消耗不小，不要因为想「多跑一个点」而挤掉明天的 One Bangkok。</div>
+          <div class="warn-item type-tip">选择休息、整理笔记、在酒店附近散步——这些都是正确的决定，不是浪费。</div>
+          <div class="warn-item type-tip">今晚建议早睡，明天的 One Bangkok 是单人延伸最后一个重点，需要充足体力。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <h4 class="activity-title">选项 A：补完 Day 6 未完成的深度田野</h4>
+        <div class="activity-note">📌 视 6/30 实际进度决定</div>
+        <button class="detail-trigger type-tip" data-panel="dp-d7-a1" data-label-open="选项 A 说明" data-label-close="收起"><span class="trigger-label">选项 A 说明</span></button>
+        <div class="detail-panel type-tip" id="dp-d7-a1">
+          <div class="detail-panel-inner">
+            <h5>🔄 选项 A：补完田野</h5>
+            <p>若 Day 6 的 Song Wat 或 Talat Noi 没有走完，或有想要深入的地点，Day 7 上午可以补完。</p>
+            <ul>
+              <li><strong>适用情况</strong>：Day 6 因天气、体力或时间不足而未完成某个地点。</li>
+              <li><strong>建议补完顺序</strong>：Song Wat 街屋建筑（若 Day 6 没去完）→ Talat Noi 河岸区域 → Warehouse 30 内部展览。</li>
+              <li><strong>时间建议</strong>：上午 09:00-12:00 补完，下午休息，晚上轻松活动。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">Day 6 补完</span><span class="detail-tag">上午进行</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <h4 class="activity-title">选项 B：新增研究点（Bangkok City Library / MRT Yellow Line 廊带）</h4>
+        <button class="detail-trigger type-tip" data-panel="dp-d7-a2" data-label-open="选项 B 说明" data-label-close="收起"><span class="trigger-label">选项 B 说明</span></button>
+        <div class="detail-panel type-tip" id="dp-d7-a2">
+          <div class="detail-panel-inner">
+            <h5>🔍 选项 B：新增研究点</h5>
+            <p>若 Day 6 顺利完成，Day 7 可以探索新的研究点。以下两个地点在 V7.1 规划书中被列为「不纳入主线但值得关注」的备选。</p>
+            <ul>
+              <li><strong>Bangkok City Library</strong>：位于 Rattanakosin 旧城区，是曼谷市立图书馆，建筑本身有历史价值。时间成本较高，适合对图书馆建筑或城市知识基础设施有研究兴趣的情况。</li>
+              <li><strong>MRT Yellow Line 廊带</strong>：2023 年开通的新路线，连接 Lat Phrao 到 Samrong，沿线有多个新兴商业节点。适合研究曼谷新都市发展轴线。注意：7/1-7/2 时间较短，不要让这个研究挤掉 One Bangkok。</li>
+              <li><strong>决策原则</strong>：若体力充足且 Day 6 已完成，选 B。若体力不足，选 C。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">体力充足才选</span><span class="detail-tag">不挤掉 One Bangkok</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <h4 class="activity-title">选项 C：休息日 + 整理笔记</h4>
+        <button class="detail-trigger type-tip" data-panel="dp-d7-a3" data-label-open="选项 C 说明" data-label-close="收起"><span class="trigger-label">选项 C 说明</span></button>
+        <div class="detail-panel type-tip" id="dp-d7-a3">
+          <div class="detail-panel-inner">
+            <h5>😴 选项 C：休息日策略</h5>
+            <p>Day 6 是全行程强度最高的一天（⭐⭐⭐⭐），若体力消耗过大，Day 7 选择休息是正确决定，不是浪费。</p>
+            <ul>
+              <li><strong>上午</strong>：睡到自然醒，酒店早餐，整理 Day 6 的田野笔记和照片。</li>
+              <li><strong>下午</strong>：ASAI 屋顶泳池放松，或在 Silom 附近的咖啡馆整理研究数据。</li>
+              <li><strong>晚上</strong>：轻松晚餐（Convent Road 附近），早睡备战 Day 8 的 One Bangkok。</li>
+              <li><strong>笔记整理建议</strong>：用 Day 6 的田野观察回答以下问题：① Song Wat 的创意再生模式与其他城市的案例有何异同？② Talat Noi 的五金行业态如何与新兴咖啡馆共存？</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">体力不足时选</span><span class="detail-tag">整理笔记</span><span class="detail-tag">备战 Day 8</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Day 8 -->
+  <article class="day-card">
+    <div class="day-hero">
+      <img src="bangkok-images/day8-one-bangkok.jpg" 
+           alt="One Bangkok modern architecture" 
+           loading="lazy"
+           data-phase="solo"
+           data-scene="departure">
+      <div class="day-tag">Day 8</div>
+    </div>
+    <div class="day-content">
+      <header class="day-header">
+        <div class="day-date">7/2 周四</div>
+        <h3 class="day-title">One Bangkok、Green Bridge Optional、返程</h3>
+        <p class="day-theme">最后一个曼谷早晨</p>
+        <div class="day-meta">
+          <span class="meta-item">⭐ 强度：轻松</span>
+          <span class="meta-item">✈️ 返程日</span>
+        </div>
+      </header>
+      <div class="day-summary">
+        <h5 class="summary-title">📋 今日导览</h5>
+        <p class="summary-paragraph">这是你在曼谷的最后一个早晨。去 One Bangkok，这座城市最新的地标——不是为了购物，而是为了观察「曼谷正在变成什么样子」。One Bangkok 代表着这座城市的野心：绿色廊道连接公园、地下街串起地铁、玻璃幕墙反射着热带阳光。你可以坐在广场上，回想这八天来看到的不同面孔：大皇宫的金色尖顶、运河社区的木造老屋、夜市里的霓虹灯牌。然后去机场，带着这些画面回家。Green Bridge 是 Optional，如果航班时间允许，可以走一趟这条新的绿色步行廊道，作为这趟旅程的最后一个注脚。</p>
+        <div class="summary-warnings">
+          <div class="warn-item type-warning">这天的所有行程都服从起飞时间。国际航班建议起飞前 3 小时到达机场，雨季塞车要预留更多缓冲。</div>
+          <div class="warn-item type-warning">Green Bridge 是 Optional，如果航班在 15:00 前，必须跳过，直接前往机场。</div>
+          <div class="warn-item type-tip">再次确认机场代码：BKK 是素万那普，DMK 是廊曼。两个机场相距约 40 公里，走错会非常麻烦。</div>
+          <div class="warn-item type-tip">这八天的研究数据、照片、笔记，建议在今晚前备份到云端。不要让它们只存在手机里。</div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">09:00 - 11:00</div>
+        <h4 class="activity-title">One Bangkok</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/One+Bangkok/@13.7234,100.5467,16z" target="_blank">One Bangkok</a></div>
+        <div class="activity-details">
+          <span>🚇 MRT Lumphini</span>
+        </div>
+        <div class="activity-note">🏙️ 新地标、城市更新样本</div>
+        <button class="detail-trigger type-place" data-panel="dp-d8-a1" data-label-open="景点研究说明" data-label-close="收起"><span class="trigger-label">景点研究说明</span></button>
+        <div class="detail-panel type-place" id="dp-d8-a1">
+          <div class="detail-panel-inner">
+            <h5>🏙️ One Bangkok 研究说明</h5>
+            <p>One Bangkok 是曼谷目前最大的混合用途开发案（104 莱，约 166,400 平方米），2023-2025 年分期开放，是研究曼谷当代城市更新的最佳样本。</p>
+            <ul>
+              <li><strong>交通</strong>：MRT Lumphini Exit 2，直接连通 One Bangkok 地下层。步行约 3 分钟。</li>
+              <li><strong>开放时间</strong>：每日 10:00-22:00。09:00 到达可以先在外部广场观察，10:00 商场开门后进入。</li>
+              <li><strong>研究重点</strong>：① 公共空间设计（广场、绿地、步行动线）② 与周边 Lumphini Park 的关系 ③ 商业业态组合（奢侈品 vs 日常消费）④ 与 Dusit Central Park 的竞合关系。</li>
+              <li><strong>Green Bridge 连接</strong>：One Bangkok 透过 Green Bridge 连接 Benjakitti Park 和 Lumphini Park，是曼谷新的绿色步行廊道。</li>
+              <li><strong>返程时间计算</strong>：依实际航班时间决定离开 One Bangkok 的时间。若下午班机，11:00 离开；若晚上班机，可以多待一些时间。</li>
+            </ul>
+            <img class="detail-img" src="bangkok-images/day8-one-bangkok.jpg" alt="One Bangkok modern architecture">
+            <div class="detail-tags"><span class="detail-tag">MRT Lumphini 直连</span><span class="detail-tag">10:00 开门</span><span class="detail-tag">Green Bridge 连接</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:00 - 12:30 Optional</div>
+        <h4 class="activity-title">Green Bridge（视时间）</h4>
+        <div class="activity-location">📍 <a href="https://www.google.com/maps/place/Benjakitti+Forest+Park/@13.7234,100.5600,15z" target="_blank">Khlong Toei Green Bridge</a></div>
+        <div class="activity-note">🌿 Optional — 依实际航班时间决定</div>
+        <button class="detail-trigger type-tip" data-panel="dp-d8-a2" data-label-open="Green Bridge 说明" data-label-close="收起"><span class="trigger-label">Green Bridge 说明</span></button>
+        <div class="detail-panel type-tip" id="dp-d8-a2">
+          <div class="detail-panel-inner">
+            <h5>🌿 Green Bridge Optional 说明</h5>
+            <p>Green Bridge 连接 Benjakitti Park 和 Lumphini Park，是曼谷 2026 年新开通的绿色步行廊道。V7.1 规划书将其列为 Optional，不得列为主线。</p>
+            <ul>
+              <li><strong>状态</strong>：2026-05-01 已 informal opening，7 月初大概率可走，但仍属试营运阶段，可能有部分区域未完全开放。</li>
+              <li><strong>体验</strong>：步行约 30-45 分钟，可以俯瞰 Benjakitti Forest Park 和曼谷城市天际线。</li>
+              <li><strong>决策标准</strong>：若航班在 18:00 以后，且体力充足，可以走。若航班在 15:00 前，跳过，直接准备返程。</li>
+              <li><strong>返程注意</strong>：走完 Green Bridge 后叫 Grab 回酒店取行李，再前往机场。预留足够时间。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">Optional</span><span class="detail-tag">依航班决定</span><span class="detail-tag">试营运中</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">下午</div>
+        <h4 class="activity-title">返程回国</h4>
+        <div class="activity-note">✈️ 依实际订票时间安排</div>
+        <button class="detail-trigger type-warning" data-panel="dp-d8-a3" data-label-open="返程注意事项" data-label-close="收起"><span class="trigger-label">返程注意事项</span></button>
+        <div class="detail-panel type-warning" id="dp-d8-a3">
+          <div class="detail-panel-inner">
+            <h5>✈️ 返程完整注意事项</h5>
+            <p>Day 8 是返程日，所有行程都服从起飞时间。以下是返程前的完整确认清单。</p>
+            <ul>
+              <li><strong>时间反推</strong>：起飞时间 - 3 小时 = 到机场时间；到机场时间 - 60-90 分钟（雨季塞车）= 离开酒店时间。</li>
+              <li><strong>行李确认</strong>：护照、机票、充电宝（随身）、研究笔记和数据备份（云端）。</li>
+              <li><strong>剩余泰铢</strong>：机场有换汇亭，但汇率差。建议在市区 SuperRich 换回，或留着下次用。</li>
+              <li><strong>研究数据备份</strong>：确认所有田野照片和笔记已上传云端，不要只存在手机本地。</li>
+              <li><strong>素万那普 vs 廊曼</strong>：确认你的班机是从素万那普（BKK）还是廊曼（DMK）出发，两个机场距离很远，不要搞错。</li>
+              <li><strong>最后一个曼谷记忆</strong>：在机场吃一碗泰式炒河粉或冬荫功，作为这趟旅行的最后一个味觉记忆。</li>
+            </ul>
+            <div class="detail-tags"><span class="detail-tag">起飞前 3 小时到机场</span><span class="detail-tag">数据备份云端</span><span class="detail-tag">确认机场代码</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Post-trip Checklist -->
+<section id="post-trip" class="section">
+  <div class="section-header">
+    <div class="section-label">After Trip</div>
+    <h2 class="section-title">回来后待办事项</h2>
+    <p class="section-desc">整理回忆、确认细节、准备下一次旅程</p>
+  </div>
+
+  <div class="checklist">
+    <div class="checklist-item" data-id="post-1">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">整理旅行照片并备份</div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="post-2">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">检查信用卡账单（Grab、Klook、餐厅等消费）</div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="post-3">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">整理研究笔记（Song Wat、Talat Noi、Jim Thompson 田野数据）</div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="post-4">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">回顾行程 — 记录什么最有记忆、下次想改进什么</div>
+      </div>
+    </div>
+
+    <div class="checklist-item" data-id="post-5">
+      <input type="checkbox" onchange="saveChecklistState()">
+      <div class="checklist-content">
+        <div class="checklist-text">分享旅行经验给朋友或写下心得</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <h3 class="footer-title">曼谷双轨深度行程｜2026</h3>
+    <p class="footer-text">
+      五个记忆场景，从相伴到各自前行，从双人成行到单人研究。<br>
+      这不只是一趟旅行，更是一场关于时间、空间与关系的实验。
+    </p>
+    <p class="footer-text" style="margin-top: var(--space-3); font-size: 12px;">
+      图片来源：<a href="https://unsplash.com/s/photos/bangkok" target="_blank" style="color: white; opacity: 0.7;">Unsplash Bangkok 免费图库</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll for navigation
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // Update active link
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+});
+
+// Update active nav on scroll
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observerOptions = {
+  root: null,
+  rootMargin: '-50% 0px -50% 0px',
+  threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
+
+// Checklist state management
+function saveChecklistState() {
+  const checklistItems = document.querySelectorAll('.checklist-item');
+  const state = {};
+
+  checklistItems.forEach(item => {
+    const id = item.dataset.id;
+    const checkbox = item.querySelector('input[type="checkbox"]');
+    state[id] = checkbox.checked;
+
+    // Update visual state
+    if (checkbox.checked) {
+      item.classList.add('checked');
+    } else {
+      item.classList.remove('checked');
+    }
+  });
+
+  localStorage.setItem('bangkok-itinerary-checklist-v2', JSON.stringify(state));
+}
+
+function loadChecklistState() {
+  const saved = localStorage.getItem('bangkok-itinerary-checklist-v2');
+  if (!saved) return;
+
+  const state = JSON.parse(saved);
+  const checklistItems = document.querySelectorAll('.checklist-item');
+
+  checklistItems.forEach(item => {
+    const id = item.dataset.id;
+    if (state[id]) {
+      const checkbox = item.querySelector('input[type="checkbox"]');
+      checkbox.checked = true;
+      item.classList.add('checked');
+    }
+  });
+}
+
+// Load state on page load
+document.addEventListener('DOMContentLoaded', () => {
+  loadChecklistState();
+});
+
+// Detail Panel toggle
+document.addEventListener('click', (e) => {
+  const trigger = e.target.closest('.detail-trigger');
+  if (!trigger) return;
+  const panelId = trigger.dataset.panel;
+  const panel = document.getElementById(panelId);
+  if (!panel) return;
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  trigger.classList.toggle('open', !isOpen);
+  const labelSpan = trigger.querySelector('.trigger-label');
+  if (labelSpan) {
+    labelSpan.textContent = isOpen ? trigger.dataset.labelOpen : trigger.dataset.labelClose;
+  }
+});
+</script>
+
+</body>
+</html>
