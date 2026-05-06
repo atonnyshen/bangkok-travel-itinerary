@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>曼谷雙軌深度行程｜2026.06.25 - 07.02</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+      max-width: 500px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+    }
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+    .lang-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .lang-btn {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    .lang-btn.primary {
+      background: #D97757;
+      border-color: #D97757;
+    }
+    .lang-btn.primary:hover {
+      background: #B85D3F;
+      border-color: #B85D3F;
+    }
+    .auto-detect {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+    .loading {
+      display: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>曼谷雙軌深度行程</h1>
+    <p class="subtitle">2026.06.25 - 07.02</p>
+    
+    <div class="lang-buttons">
+      <a href="bangkok-travel-magazine.html" class="lang-btn primary">繁體中文</a>
+      <a href="bangkok-travel-magazine-cn.html" class="lang-btn">简体中文</a>
+    </div>
+    
+    <p class="auto-detect">正在自動偵測語言...</p>
+    <p class="loading">正在跳轉...</p>
+  </div>
+
+  <script>
+    (function() {
+      var loading = document.querySelector('.loading');
+      var autoDetect = document.querySelector('.auto-detect');
+      
+      function getPreferredLanguage() {
+        var lang = navigator.language || navigator.userLanguage || '';
+        lang = lang.toLowerCase();
+        
+        if (lang.indexOf('zh-cn') !== -1 || lang.indexOf('zh-hans') !== -1 || 
+            lang.indexOf('zh-sg') !== -1 || lang.indexOf('zh-my') !== -1) {
+          return 'cn';
+        }
+        return 'tw';
+      }
+      
+      setTimeout(function() {
+        var lang = getPreferredLanguage();
+        autoDetect.style.display = 'none';
+        loading.style.display = 'block';
+        
+        setTimeout(function() {
+          if (lang === 'cn') {
+            window.location.href = 'bangkok-travel-magazine-cn.html';
+          } else {
+            window.location.href = 'bangkok-travel-magazine.html';
+          }
+        }, 500);
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
