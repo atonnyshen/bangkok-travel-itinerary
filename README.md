@@ -10,7 +10,7 @@
 
 ```
 2026曼谷雙軌行程/
-├── web/                              # 網頁版本（可直接在瀏覽器開啟）
+├── docs/                             # 網頁版本（GitHub Pages）
 │   ├── index.html                    # 入口頁面（自動語言偵測）
 │   ├── bangkok-travel-magazine.html  # 繁體中文版（台灣讀者）
 │   ├── bangkok-travel-magazine-cn.html # 簡體中文版（中國大陸讀者）
